@@ -18,14 +18,14 @@
 - [X] [#1462](https://github.com/xenia-project/xenia/pull/1462) Added new 0xFE app message
 - [X] [#1463](https://github.com/xenia-project/xenia/pull/1463) Dequeue remain notification when match_id is incorrect
 - [X] [#1396](https://github.com/xenia-project/xenia/pull/1396) Recent Files Menu Bar
-- [X] [#1317](https://github.com/xenia-project/xenia/pull/1317) Threading unit tests and linux threading implementation
-- [X] [#1339](https://github.com/xenia-project/xenia/pull/1339) xenia-cpu-ppc-tests (Rebase of #803)
-- [X] [#1397](https://github.com/xenia-project/xenia/pull/1397) Linux memory Fixes
-- [X] [#1431](https://github.com/xenia-project/xenia/pull/1431) Linux windowing fixes
-- [X] [#1433](https://github.com/xenia-project/xenia/pull/1433) Linux filesystem
-- [X] [#1435](https://github.com/xenia-project/xenia/pull/1435) Implement debug functions for Linux
-- [X] [#1322](https://github.com/xenia-project/xenia/pull/1322) Linux misc fixes
-- [X] [#1405](https://github.com/xenia-project/xenia/pull/1405) Implement stack walking (linux)
+- [ ] [#1317](https://github.com/xenia-project/xenia/pull/1317) Threading unit tests and linux threading implementation
+- [ ] [#1339](https://github.com/xenia-project/xenia/pull/1339) xenia-cpu-ppc-tests (Rebase of #803)
+- [ ] [#1397](https://github.com/xenia-project/xenia/pull/1397) Linux memory Fixes
+- [ ] [#1431](https://github.com/xenia-project/xenia/pull/1431) Linux windowing fixes
+- [ ] [#1433](https://github.com/xenia-project/xenia/pull/1433) Linux filesystem
+- [ ] [#1435](https://github.com/xenia-project/xenia/pull/1435) Implement debug functions for Linux
+- [ ] [#1322](https://github.com/xenia-project/xenia/pull/1322) Linux misc fixes
+- [ ] [#1405](https://github.com/xenia-project/xenia/pull/1405) Implement stack walking (linux)
 - [X] [#1472](https://github.com/xenia-project/xenia/pull/1472) Fix GTK submenus
 - [X] [#1473](https://github.com/xenia-project/xenia/pull/1473) Fixup GetProcAddressByOrdinal
 - [X] [#1474](https://github.com/xenia-project/xenia/pull/1474) Fix discord cvar
