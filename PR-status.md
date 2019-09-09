@@ -26,6 +26,6 @@
 - [ ] [#1435](https://github.com/xenia-project/xenia/pull/1435) Implement debug functions for Linux
 - [ ] [#1322](https://github.com/xenia-project/xenia/pull/1322) Linux misc fixes
 - [ ] [#1405](https://github.com/xenia-project/xenia/pull/1405) Implement stack walking (linux)
-- [X] [#1472](https://github.com/xenia-project/xenia/pull/1472) Fix GTK submenus
+- [ ] [#1472](https://github.com/xenia-project/xenia/pull/1472) Fix GTK submenus
 - [X] [#1473](https://github.com/xenia-project/xenia/pull/1473) Fixup GetProcAddressByOrdinal
 - [X] [#1474](https://github.com/xenia-project/xenia/pull/1474) Fix discord cvar
