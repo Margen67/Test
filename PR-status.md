@@ -2,6 +2,7 @@
     Checked - merged to canary
     Delete line when merged to master or denied from master
 
+- [X] Experimental Workaround for Unreal Engine 3 
 - [X] [#1250](https://github.com/xenia-project/xenia/pull/1250) Support loading XEXP from STFS package/extracted TU
 - [X] [#1243](https://github.com/xenia-project/xenia/pull/1243) Various additions to support dash.xex
 - [X] [#1444](https://github.com/xenia-project/xenia/pull/1444) XBLA fixes
