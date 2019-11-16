@@ -2,7 +2,7 @@
     Checked - merged to canary
     Delete line when merged to master or denied from master
 
-- [X] Experimental Workaround for Unreal Engine 3 (see this [commit](https://github.com/xenia-canary/xenia-canary/commit/e453ace05be338d60e9523872f84b5b36a796e99).)
+- [X] Experimental Workaround for Unreal Engine 3 (see this [commit](https://github.com/xenia-canary/xenia-canary/commit/6804467684389365818459ee2a708ecc5a6cc0da).)
 - [X] [#1250](https://github.com/xenia-project/xenia/pull/1250) Support loading XEXP from STFS package/extracted TU
 - [X] [#1243](https://github.com/xenia-project/xenia/pull/1243) Various additions to support dash.xex
 - [X] [#1444](https://github.com/xenia-project/xenia/pull/1444) XBLA fixes
@@ -30,3 +30,4 @@
 - [ ] [#1472](https://github.com/xenia-project/xenia/pull/1472) Fix GTK submenus
 - [X] [#1473](https://github.com/xenia-project/xenia/pull/1473) Fixup GetProcAddressByOrdinal
 - [X] [#1474](https://github.com/xenia-project/xenia/pull/1474) Fix discord cvar
+- [X] [#1506](https://github.com/xenia-project/xenia/pull/1506) [Kernel] Fixes to thread reference counters
