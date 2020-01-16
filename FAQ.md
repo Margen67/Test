@@ -2,8 +2,7 @@
   1. Identify Game Title ID.
 This can be identified by running the game in Xenia.
 
-<details> 
-<summary>Image (click to expand)</summary>
+<details><summary>Image (click to expand)</summary>
 
 ![](https://i.imgur.com/Vhz9sCC.png)
 
@@ -11,8 +10,7 @@ This can be identified by running the game in Xenia.
 
   2. Locate your TU folder from your removable storage.
 
-<details> 
-<summary>Image (click to expand)</summary>
+<details><summary>Image (click to expand)</summary>
 
 ![](https://i.imgur.com/M4R1SyZ.png)
 
