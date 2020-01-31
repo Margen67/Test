@@ -1,3 +1,19 @@
+*[Xenia Master Options](https://github.com/xenia-project/xenia/wiki/Options)*
+
+---
+
+### How to use:
+To change these options, open `xenia.config.toml` in a text editor like [Notepad++](https://notepad-plus-plus.org/download/). It will be in `Documents\Xenia` by default. If `portable.txt` is present it will be in the same directory as xenia.exe.
+
+You can make per-game configs by placing `xenia.config.toml` in the `content\TitleID` folder.
+
+For launchers/frontends like [Bottlenose](https://github.com/quinton-ashley/bottlenose) you can use the `--config` launch parameter to specify what config to use.
+
+To launch specific games add the path to the game before the launch options, for example:
+
+```xenia.exe path/to/game.iso --vsync=false```
+
+#
 ### Not present in Xenia master:
 
 #### CPU:
