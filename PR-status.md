@@ -33,3 +33,4 @@
 - [ ] [#1433](https://github.com/xenia-project/xenia/pull/1433) Linux filesystem
 - [ ] [#1435](https://github.com/xenia-project/xenia/pull/1435) Implement debug functions for Linux
 - [ ] [#1472](https://github.com/xenia-project/xenia/pull/1472) Fix GTK submenus
+- [X] [#1493](https://github.com/xenia-project/xenia/pull/1493) Support Linux systems and non XInput controllers
