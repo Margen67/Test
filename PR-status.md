@@ -35,3 +35,4 @@
 - [ ] [#1472](https://github.com/xenia-project/xenia/pull/1472) Fix GTK submenus
 - [X] [#1493](https://github.com/xenia-project/xenia/pull/1493) Support Linux systems and non XInput controllers
 - [X] [#1498](https://github.com/xenia-project/xenia/pull/1498) Support cross platform audio
+- [X] [#1517](https://github.com/xenia-project/xenia/pull/1517) Change thunk layout and fix Linux thunk misalignment
