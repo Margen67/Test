@@ -1,7 +1,9 @@
-    Unchecked - not merged
-    Checked - merged to canary
-    Strikethrough line when merged to master or denied from master
+### Glossary:
+    Checked - Merged to Canary
+    Unchecked - Not merged to Canary
+    Strikethrough - Merged to master
 
+#
 - [X] Experimental Workaround for Unreal Engine 3 (see this [commit](https://github.com/xenia-canary/xenia-canary/commit/6804467684389365818459ee2a708ecc5a6cc0da).)
 - [X] [#1243](https://github.com/xenia-project/xenia/pull/1243) Various additions to support dash.xex
 - [X] [#1250](https://github.com/xenia-project/xenia/pull/1250) Support loading XEXP from STFS package/extracted TU
