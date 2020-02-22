@@ -1,5 +1,4 @@
 [Home](https://github.com/xenia-canary/xenia-canary/wiki)
-
 ---
 
   * [FAQ](https://github.com/xenia-canary/xenia-canary/wiki/FAQ)
