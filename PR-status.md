@@ -38,3 +38,10 @@
 - [X] ~~[#1493](https://github.com/xenia-project/xenia/pull/1493) Support Linux systems and non XInput controllers~~
 - [X] ~~[#1498](https://github.com/xenia-project/xenia/pull/1498) Support cross platform audio~~
 - [X] ~~[#1517](https://github.com/xenia-project/xenia/pull/1517) Change thunk layout and fix Linux thunk misalignment~~
+
+### Non-PRed changes (very experimental/incomplete things):
+- [ ] [clockfreq-test](https://github.com/xenia-canary/xenia-canary/tree/clockfreq-test): Test branch with clock frequency changed to 49.975MHz (reportedly the actual frequency used by X360) - unsure what difference (if any) this change makes.
+- [ ] [import-libraries](https://github.com/xenia-canary/xenia-canary/tree/import-libraries): Fix loading import library modules - mostly the same as [#1354](https://github.com/xenia-project/xenia/pull/1354), but hopefully with issues noted in that PR solved (need to test this with games that [#1354](https://github.com/xenia-project/xenia/pull/1354) reportedly broke before we can merge this in!)
+- [X] [stfs-headers-new](https://github.com/xenia-canary/xenia-canary/commits/stfs-headers-new): Improved STFS structures, and the changes from [#1408](https://github.com/xenia-project/xenia/pull/1408) (seems to help fix save/DLC issues in many games)
+- [X] Profiles: Support for X360-format profile data (I'm sure we had the profile changes in a separate branch, but I guess it must have been removed...)
+- [X] keyboard_passthru: Allows keyboard events to be passed through to the game without converting to button inputs etc, allows using dev. consoles & such in games that have them (Not sure if this was ever put into a seperate branch or not :/)
