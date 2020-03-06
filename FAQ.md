@@ -1,7 +1,7 @@
 ### What is the difference between Xenia Canary and Xenia master?
 Xenia Canary is a fork of Xenia with changes not present in master, such as the Unreal Engine workaround.
 
-*[Full list of changes](https://github.com/xenia-canary/xenia-canary/wiki/PR-status)*
+*[Full list of changes](https://github.com/xenia-canary/xenia-canary/projects/1)*
 
 #
 ### How to install Title Update(s)
