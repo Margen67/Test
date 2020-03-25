@@ -27,7 +27,7 @@
 | Off              | `false`
 
 #### HID:
-##### Maybe useful for debug games, disables keyboard->gamepad emulation, and forwards exact keyboard events to game (note that Xenia keybinds, eg. H to show FPS, will still be in effect):
+##### Maybe useful for debug games, disables keyboard->gamepad emulation, and forwards exact keyboard events to guest. Note that keybinds, eg. H to show FPS, will still be in effect:
 | `keyboard_passthru` = | `bool`
 | --------------------- | ------
 | Off *(default)*       | `false`
@@ -48,7 +48,7 @@
 #### Profiles:
 ##### Signin state of (user_0-3):
 | `user_#_state` =      | `#`
-| ----------------      | ---
+| ----------------      | :-:
 | Signed out            | 0
 | Signed in *(default)* | 1
 | Signed in+Xbox Live   | 2
@@ -57,15 +57,16 @@
 | --------------- | ---
 
 #### UI:
-| `window_height/width` | `#`
-| --------------------- | ---
-| `height` =            | `720` *(default)*
-| `width` =             | `1280` *(default)*
+##### Window height/width:
+| `window_`  | `#`
+| ---------  | ---
+| `height` = | `720` *(default)*
+| `width` =  | `1280` *(default)*
 
 #### Video:
 ##### avpack (video mode):
 | `avpack` =               | `#`
-| --------                 | ---
+| --------                 | :-:
 | HDMI *(default)*         | `8`
 | TV PAL-60                | `7`
 | VGA                      | `6`
