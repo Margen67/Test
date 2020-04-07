@@ -9,10 +9,16 @@ on:
       - README.md
 
 jobs:
-  build:
-    runs-on: ARM32
+  release:
+    if: |
+      github.event.action != 'pull_request' &&
+      github.ref == 'refs/heads/develop'
+                 || 'refs/heads/master' &&
+      github.repository == 'Margen67/Test'
+    env:
+      artifact-1: CxbxReloaded-Release-VS2019
+      artifact-2: CxbxReloaded-Release-VS2017
+    runs-on: windows-latest
     steps:
-    - name: Test
-      run: |
-        echo ${{ runner.os }}
-        dir & ls & pwd
+      - name: echo
+        run: echo echo
