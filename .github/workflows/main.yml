@@ -14,7 +14,7 @@ jobs:
       github.event.action != 'pull_request' &&
       github.ref == 'refs/heads/develop'
                  || 'refs/heads/master' &&
-      github.repository == 'Margen67/Test'
+      github.repository == 'invalid/123'
     env:
       artifact-1: CxbxReloaded-Release-VS2019
       artifact-2: CxbxReloaded-Release-VS2017
