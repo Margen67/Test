@@ -12,6 +12,7 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-    - uses: actions/upload-artifact@v2-preview
-      with:
-        path: invalid/path
+    - shell: bash
+      run: |
+        C: & cd C:
+        find . -name "devenv*"
