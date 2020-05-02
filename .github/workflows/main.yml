@@ -13,6 +13,6 @@ jobs:
     runs-on: windows-latest
     steps:
     - shell: bash
+      working-directory: C:\
       run: |
-        C: & cd C:
         find . -name "devenv*"
