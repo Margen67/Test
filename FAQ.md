@@ -1,26 +1,19 @@
 ### What is the difference between Xenia Canary and Xenia master?
 Xenia Canary is a fork of Xenia with changes not present in master, such as the Unreal Engine workaround.
-
-*[Full list of changes](https://github.com/xenia-canary/xenia-canary/projects/1)*
-
+  * *[Full list of changes](https://github.com/xenia-canary/xenia-canary/projects/1)*
 #
 ### How to install Title Update(s)
   1. Identify Game Title ID. This can be identified by running the game in Xenia.
+  <details><summary>Image (click to expand)</summary>
 
-<details><summary>Image (click to expand)</summary>
-
-![](https://i.imgur.com/Vhz9sCC.png)
-</details>
+  ![](https://i.imgur.com/Vhz9sCC.png)</details>
 
   2. Locate your TU folder from your removable storage.
+  <details><summary>Image (click to expand)</summary>
 
-<details><summary>Image (click to expand)</summary>
-
-![](https://i.imgur.com/M4R1SyZ.png)
-</details>
+  ![](https://i.imgur.com/M4R1SyZ.png)</details>
 
   3. Copy your TU file from `$TitleUpdate\[TitleID]\000B0000` to `Documents\Xenia\[TitleID]\000B0000`
-
 #
 ### How to install the Xbox 360 dashboard
 #### Prerequisites:
@@ -35,10 +28,11 @@ Xenia Canary is a fork of Xenia with changes not present in master, such as the 
   3. Add the `.xzp` file extension to `gamercrd`, `shrdres`, and `xam`
   4. Run `dash.xex`
 
+<!--
 #### TODO: Updating from 1888
   * **THIS REQUIRES 1888 AS A BASE!**
   * Xenia Canary can only run dashboards up to ~12625. Newer versions might not work.
-
+-->
 <!--
 Official dashboards | Info
 ------------------- | ----
@@ -57,5 +51,5 @@ Official dashboards | Info
 [16203](https://web.archive.org/web/20140514173813/http://download.microsoft.com/download/8/3/3/833C313F-C632-4270-8B25-26C214B54A2F/SystemUpdate_16203_USB.zip) | [Source](https://web.archive.org/web/20130621155111/http://support.xbox.com/en-US/xbox-360/system-updates/system-updates-info#470b4208b65444fea6dcee212513a015)
 [16537](https://web.archive.org/web/20131103105805/http://download.microsoft.com/download/C/3/9/C39534C0-F579-4B74-8DDE-94CA3A298ABE/SystemUpdate_16537_USB.zip) | [Source](https://web.archive.org/web/20130923005905/http://support.xbox.com/en-US/xbox-360/system-updates/system-updates-info#df57c9267b2646ada66dc85a222eeb13)
 [16547](https://web.archive.org/web/20140112120534/http://download.microsoft.com/download/6/8/9/68917704-C8D7-4EB0-AC87-8AAB41C4378E/SystemUpdate_16547_USB.zip) | [Source](https://web.archive.org/web/20131027130203/http://support.xbox.com/en-US/xbox-360/system-updates/system-updates-info#fc2cf1e65c1e40778fd4f7f72b4e58bc)
--->
 [Latest](https://www.xbox.com/system-update-usb) | [Source](https://beta.support.xbox.com/help/xbox-360/console/system-updates-info)
+-->
