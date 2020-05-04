@@ -12,7 +12,11 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-    - shell: bash
-      working-directory: C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise
-      run: |
-        find . -name "devenv*"
+      - name: test
+        run: |
+          mkdir test
+          echo memes > test\test.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: test
+          path: test
