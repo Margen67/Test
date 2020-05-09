@@ -10,7 +10,16 @@ on:
 
 jobs:
   test:
-    runs-on: macos-10.13
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, windows-2016]
+        include:
+          - os: windows-latest
+            VSver: 2019
+          - os: windows-2016
+            VSver: 2017
     steps:
       - name: test
-        run: ls /Applications/
+        run: 'C:\Program Files (x86)\Microsoft Visual Studio\${{ matrix.VSver }}\Enterprise\Common7\IDE\devenv.com'
