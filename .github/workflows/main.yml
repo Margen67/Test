@@ -13,10 +13,4 @@ jobs:
     runs-on: macos-10.14
     steps:
       - name: test
-        run: |
-          mkdir test
-          echo memes > test\test.txt
-      - uses: actions/upload-artifact@v2
-        with:
-          name: test
-          path: test/
+        run: ls /Applications/
