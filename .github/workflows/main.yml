@@ -22,4 +22,4 @@ jobs:
             VSver: 2017
     steps:
       - name: test
-        run: 'C:\Program Files (x86)\Microsoft Visual Studio\${{ matrix.VSver }}\Enterprise\Common7\IDE\devenv.com'
+        run: Test-Path 'C:\Program Files (x86)\Microsoft Visual Studio\${{ matrix.VSver }}\Enterprise\Common7\IDE\devenv.com'
