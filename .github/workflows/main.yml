@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: macos-10.14
     steps:
       - name: test
         run: |
