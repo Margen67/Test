@@ -13,4 +13,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: test
-        run: '& "$env:PROGRAMFILES(X86)\Microsoft Visual Studio\${{ matrix.VSver }}\Enterprise\Common7\IDE\devenv.com"'
+        run: '& "$env:PROGRAMFILES(X86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\devenv.com"'
