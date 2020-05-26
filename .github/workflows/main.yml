@@ -12,5 +12,4 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-      - name: test
-        run: choco install visualstudiocommunity2013
+      - run: pwd
