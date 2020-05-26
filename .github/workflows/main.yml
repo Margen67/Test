@@ -12,4 +12,6 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-      - run: pwd
+      - name: test
+        working-directory: .
+        run: pwd
