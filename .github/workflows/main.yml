@@ -13,5 +13,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: test
-        working-directory: .
+        working-directory: \
         run: pwd
