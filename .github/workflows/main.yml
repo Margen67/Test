@@ -13,5 +13,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: test
-        working-directory: \
-        run: pwd
+        run: echo "$env:ProgramFiles(x86)"
