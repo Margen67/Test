@@ -13,4 +13,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: test
-        run: echo "$env:ProgramFiles(x86)"
+        run: powercfg list
