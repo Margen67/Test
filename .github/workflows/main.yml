@@ -13,4 +13,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: test
-        run: powercfg list
+        run: '[System.Environment]::OSVersion.Version'
