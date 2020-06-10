@@ -1,0 +1,12 @@
+trigger:
+  paths:
+    include:
+    - .azure-pipelines.yml
+
+pool:
+  vmImage: 'windows-latest'
+steps:
+- checkout: self
+  fetchDepth: 1
+- pwsh: '[System.Environment]::OSVersion.Version'
+  displayName: test
