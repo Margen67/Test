@@ -1,0 +1,14 @@
+version: '{build}-{branch}'
+
+only_commits:
+  files:
+    - .appveyor.yml
+
+image: Visual Studio 2019
+
+clone_depth: 1
+
+build_script:
+  - ps: '[System.Environment]::OSVersion.Version'
+
+test: off
