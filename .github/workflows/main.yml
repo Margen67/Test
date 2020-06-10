@@ -2,11 +2,15 @@ name: Test
 
 on:
   push:
-    paths-ignore: 
-      - README.md
+    paths-ignore:
+      - '.github/*'
+      - '*.md'
+      - '*.yml'
   pull_request:
-    paths-ignore: 
-      - README.md
+    paths-ignore:
+      - '.github/*'
+      - '*.md'
+      - '*.yml'
 
 jobs:
   test:
