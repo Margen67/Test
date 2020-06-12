@@ -3,14 +3,18 @@ name: Test
 on:
   push:
     paths:
-      - .github/workflows/main.yml
+      - ${{ matrix.test }}
   pull_request:
     paths:
-      - .github/workflows/main.yml
+      - ${{ matrix.test }}
 
 jobs:
   test:
     runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test: [value1, ...valueN]
     steps:
       - name: test
         run: '[System.Environment]::OSVersion.Version'
