@@ -14,7 +14,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        test: [value1, ...valueN]
+        Configuration: [Release 2013, Release, Debug 2013, Debug]
     steps:
-      - name: test
-        run: '[System.Environment]::OSVersion.Version'
+    - name: Get dll name
+      run: echo '::set-env name=spt-extension::-${{ matrix.Configuration }} -replace ''Release '| 'Debug '','
+    - name: Echo spt-extension
+      run: echo "$env:spt-extension"
