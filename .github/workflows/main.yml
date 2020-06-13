@@ -2,11 +2,9 @@ name: Test
 
 on:
   push:
-    paths-ignore:
-      - ${{ matrix.test }}
+    paths-ignore: ['*.yml', '*.md']
   pull_request:
-    paths-ignore:
-      - ${{ matrix.test }}
+    paths-ignore: ['*.yml', '*.md']
 
 jobs:
   test:
