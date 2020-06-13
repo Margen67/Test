@@ -15,6 +15,6 @@ jobs:
         Configuration: [Release 2013, Release, Debug 2013, Debug]
     steps:
     - name: Get dll name
-      run: echo '::set-env name=spt_extension::$(echo ${{ matrix.Configuration }} -replace "Release\ |Debug\ ",'')'
+      run: echo "::set-env name=spt_extension::$(echo ${{ matrix.Configuration }} -replace 'Release\ |Debug\ ','')"
     - name: Echo spt-extension
       run: echo "$env:spt_extension"
