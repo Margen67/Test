@@ -17,4 +17,4 @@ jobs:
     - name: Get dll name
       run: echo "::set-env name=spt-extension::$('${{ matrix.Configuration }}' -replace 'Release\ |Debug\ ','')"
     - name: Echo spt-extension
-      run: echo $env:'spt-extension'
+      run: echo $env:"spt-extension"
