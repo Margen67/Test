@@ -19,7 +19,7 @@ jobs:
         echo memes > "${{ matrix.Configuration }}\spt-memes.dll"
     - name: Get dll name
       run: |
-        $spt_filename = "(gi ${{ matrix.Configuration }}\spt*.dll).BaseName"
+        $spt_filename = "$(gi ${{ matrix.Configuration }}\spt*.dll).BaseName"
         echo "::set-env name=spt_filename::$spt_filename"
     - name: Echo spt_extension
       run: echo "$env:spt_filename"
