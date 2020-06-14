@@ -14,7 +14,8 @@ jobs:
       matrix:
         Configuration: [Release 2013, Release, Debug 2013, Debug]
     steps:
+    - run: echo memes > "${{ matrix.Configuration }}\spt-memes.dll
     - name: Get dll name
-      run: echo "::set-env name=spt_extension::-$('${{ matrix.Configuration }}' -replace 'Release\ |Debug\ ','')"
+      run: echo "::set-env name=spt_filename::$(gi "${{ matrix.Configuration }}\spt*.dll").BaseName"
     - name: Echo spt_extension
-      run: echo "$env:spt_extension"
+      run: echo "$env:spt_filename"
