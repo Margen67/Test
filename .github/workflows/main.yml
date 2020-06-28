@@ -8,16 +8,6 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        Configuration: [Release 2013, Release, Debug 2013, Debug]
+    runs-on: ubuntu-latest
     steps:
-    - run: |
-        mkdir -vb "${{ matrix.Configuration }}"
-        echo memes > "${{ matrix.Configuration }}\spt-memes.dll"
-    - name: Get dll name
-      run: echo "::set-env name=spt_filename::$(gi `"${{ matrix.Configuration }}\spt*.dll`").BaseName"
-    - name: Echo spt_extension
-      run: echo "$env:spt_filename"
+    - run: genisoimage
