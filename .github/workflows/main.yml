@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     runs-on: windows-latest
+    env:
+      POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/setup-dotnet@v1
-    - run: dotnet --version
+    - run: vcpkg
