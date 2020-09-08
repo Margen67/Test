@@ -13,4 +13,7 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
     - uses: actions/checkout@v2
-    - run: git branch --show-current
+    - name: Get branch
+      id: branch
+      run: echo "::set-output name=branch::$(git branch --show-current)"
+    - run: echo ${{ steps.branch.outputs.branch }}
