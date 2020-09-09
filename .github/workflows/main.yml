@@ -13,7 +13,9 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
     - uses: actions/checkout@v2
-    - name: Get branch
-      id: branch
-      run: echo "::set-output name=branch::$(git branch --show-current)"
-    - run: echo ${{ steps.branch.outputs.branch }}
+    - uses: dev-drprasad/delete-tag-and-release@v0.1.2
+      with:
+        delete_release: true
+        tag_name: asdf
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
