@@ -14,9 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        echo '' > memes.txt
-        echo '' > memes.exe
-        mkdir folder && echo '' > folder\memes.txt
-    - uses: actions/upload-artifact@v2
-      with:
-        path: ${{ env.GITHUB_WORKSPACE }}\..\Test
+        echo ${POWERSHELL_TELEMETRY_OPTOUT}
