@@ -14,4 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        echo POWERSHELL_TELEMETRY_OPTOUT = ${POWERSHELL_TELEMETRY_OPTOUT}
+        mkdir dir
+        echo '' > dir\memes.txt
+        echo '' > dir\memes.exe
+    - uses: actions/upload-artifact@v2
+      with:
+        path: dir\*.(txt,exe)
+        if-no-files-found: error
