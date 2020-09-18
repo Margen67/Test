@@ -19,4 +19,4 @@ jobs:
         mkdir folder && echo '' > folder\memes.txt
     - uses: actions/upload-artifact@v2
       with:
-        path: '*.[txt,exe]'
+        path: ${{ env.GITHUB_WORKSPACE }}\..\Test
