@@ -11,5 +11,6 @@ jobs:
     runs-on: windows-latest
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
+      memes: ${{ hashFiles('README.md') }}
     steps:
-    - run: echo ${{ hashFiles('README.md') }}
+    - run: echo $env:memes
