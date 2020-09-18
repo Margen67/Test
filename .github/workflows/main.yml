@@ -16,7 +16,7 @@ jobs:
     - run: |
         echo '' > memes.txt
         echo '' > memes.exe
-        echo '' > folder\memes.txt
+        mkdir folder && echo '' > folder\memes.txt
     - uses: actions/upload-artifact@v2
       with:
         path: '*.[txt,exe]'
