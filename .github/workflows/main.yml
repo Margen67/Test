@@ -12,12 +12,7 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - run: |
-        mkdir dir
-        echo '' > dir\memes.txt
-        echo '' > dir\memes.exe
-    - uses: actions/upload-artifact@v2
-      with:
-        path: dir\(*.txt|*.exe)
-        if-no-files-found: error
+    - name: Get path
+      id: path
+      run: echo "::set-output name=path::((Resolve-Path ..\game).Path)"
+    - run: ${{ steps.path.outputs.path }}
