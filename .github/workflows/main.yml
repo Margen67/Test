@@ -19,5 +19,5 @@ jobs:
         echo '' > dir\memes.exe
     - uses: actions/upload-artifact@v2
       with:
-        path: dir\*.(txt,exe)
+        path: dir\(*.txt|*.exe)
         if-no-files-found: error
