@@ -12,7 +12,4 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-    - name: Get path
-      id: path
-      run: echo "::set-output name=path::((Resolve-Path ..).Path)"
-    - run: ${{ steps.path.outputs.path }}
+    - run: echo ${{ hashFiles('README.md') }}
