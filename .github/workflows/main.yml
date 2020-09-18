@@ -13,5 +13,10 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
     - uses: actions/checkout@v2
-    - shell: cmd
-      run: dir
+    - run: |
+        echo '' > memes.txt
+        echo '' > memes.exe
+        echo '' > folder\memes.txt
+    - uses: actions/upload-artifact@v2
+      with:
+        path: '*.[txt,exe]'
