@@ -13,5 +13,8 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
     - run: |
-        $hash = ${{ hashFiles('README.md') }}
-        echo $hash
+        memes > dir\memes.txt
+        memes > dir\memes.bad
+    - uses: actions/upload-artifact@v2
+      with:
+        path: dir\!*.bad
