@@ -13,8 +13,8 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
     - run: |
-        memes > dir\memes.txt
-        memes > dir\memes.bad
+        echo memes > dir\memes.txt
+        echo memes > dir\memes.bad
     - uses: actions/upload-artifact@v2
       with:
         path: dir\!*.bad
