@@ -18,4 +18,7 @@ jobs:
         echo memes > dir\memes.bad
     - uses: actions/upload-artifact@v2
       with:
-        path: dir\!*.bad
+        path: |
+          dir
+          !**.bad
+        if-no-files-found: error
