@@ -12,15 +12,4 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-    - run: |
-        mkdir dir
-        echo memes > memes.bad
-        echo memes > dir\memes.txt
-        echo memes > dir\memes.bad
-    - uses: actions/upload-artifact@v2
-      with:
-        name: memes
-        path: |
-          dir
-          !**.bad
-        if-no-files-found: error
+    - run: echo ${env:CI}
