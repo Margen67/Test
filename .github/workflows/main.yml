@@ -8,8 +8,12 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-    - run: echo ${env:CI}
+    - run: echo $(uname -s)
