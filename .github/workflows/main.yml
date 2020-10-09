@@ -2,9 +2,9 @@ name: Test
 
 on:
   push:
-    paths-ignore: ['*.yml', '*.md']
+#    paths-ignore: ['*.yml', '*.md']
   pull_request:
-    paths-ignore: ['*.yml', '*.md']
+#    paths-ignore: ['*.yml', '*.md']
 
 jobs:
   test:
