@@ -16,4 +16,6 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-    - run: echo $(uname -s)
+    - run: |
+        $installationPath = vswhere -prerelease -latest -property installationPath
+        echo $installationPath
