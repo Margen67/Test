@@ -29,6 +29,21 @@ title_id = "4D53082D"
 #media_id = "22AB4F7C"
 
 [[patch]]
+    name = "Unlock FPS"
+    desc = "Removes FPS Cap. Users will need to set vsync to false in Xenia Options to go above 60FPS."
+    author = "illusion"
+    is_enabled = true
+
+# vsync limit // doesn't work above 60hz if not using param
+    [[patch.be32]]
+        address = 0x8298CF70
+        value = 0x39600000
+
+    [[patch.be32]]
+        address = 0x824A2E94
+        value = 0x60000000
+
+[[patch]]
     name = "Disable Ambient Occlusion"
     desc = "None"
     author = "illusion"
