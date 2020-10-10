@@ -47,7 +47,7 @@ title_id = "4D53082D"
     name = "Disable Ambient Occlusion"
     desc = "None"
     author = "illusion"
-    is_enabled = true
+    is_enabled = false
 
     [[patch.be32]]
         address = 0x826F9D18
