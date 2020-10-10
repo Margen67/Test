@@ -1,6 +1,6 @@
 # Gears of War
 <details> 
-<summary>Patches</summary>
+<summary>Patches (Click to Expand)</summary>
 
 ```
 title_name = "Gears Of War"
@@ -21,7 +21,7 @@ title_id = "4D5307D5"
 
 # Gears Of War 2
 <details> 
-<summary>Patches</summary>
+<summary>Patches (Click to Expand)</summary>
 
 ```
 title_name = "Gears of Wars 2"
@@ -52,7 +52,7 @@ title_id = "4D53082D"
 
 # Rockstar Table Tennis
 <details> 
-<summary>Patches</summary>
+<summary>Patches (Click to Expand)</summary>
 
 ```
 title_name = "Rockstar Table Tennis"
@@ -72,7 +72,7 @@ title_id = "545407DF"
 
 # Mirror's Edge
 <details> 
-<summary>Patches</summary>
+<summary>Patches (Click to Expand)</summary>
 
 ```
 title_name = "Mirror's Edge"
