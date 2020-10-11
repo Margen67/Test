@@ -1,6 +1,5 @@
-# Gears of War
-<details> 
-<summary>Patches (Click to Expand)</summary>
+### Gears of War
+<details><summary>Patches (Click to Expand)</summary>
 
 ```
 title_name = "Gears Of War"
@@ -16,12 +15,11 @@ title_id = "4D5307D5"
 		address = 0x822306D8
 		value = 0x409AFF6C
 ```
-
 </details>
 
-# Gears Of War 2
-<details> 
-<summary>Patches (Click to Expand)</summary>
+#
+### Gears Of War 2
+<details><summary>Patches (Click to Expand)</summary>
 
 ```
 title_name = "Gears of Wars 2"
@@ -65,9 +63,9 @@ title_id = "4D53082D"
 ```
 </details>
 
-# Rockstar Table Tennis
-<details> 
-<summary>Patches (Click to Expand)</summary>
+#
+### Rockstar Table Tennis
+<details><summary>Patches (Click to Expand)</summary>
 
 ```
 title_name = "Rockstar Table Tennis"
@@ -85,9 +83,9 @@ title_id = "545407DF"
 ```
 </details>
 
-# Mirror's Edge
-<details> 
-<summary>Patches (Click to Expand)</summary>
+#
+### Mirror's Edge
+<details><summary>Patches (Click to Expand)</summary>
 
 ```
 title_name = "Mirror's Edge"
