@@ -5,4 +5,4 @@
   * [PR Status](../projects/1)
   * [Profiles](Profiles)
   * [Options](Options)
-  * [Game Patches](Game-Patches)
+  * [Game Patches](https://github.com/xenia-canary/game-patches/blob/main/patches.md)
