@@ -14,35 +14,35 @@ jobs:
     steps:
     - shell: pwsh
       run: |
-        ${color} = Black
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = DarkBlue
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = DarkGreen
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = DarkCyan
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = DarkRed
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = DarkMagenta
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = DarkYellow
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = Gray
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = DarkGray
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = Blue
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = Green
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = Cyan
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = Red
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = Magenta
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = Yellow
-        Write-Host -ForegroundColor ${color} "${color}"
-        ${color} = White
-        Write-Host -ForegroundColor ${color} "${color}"
+        ${color} = "Black"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "DarkBlue"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "DarkGreen"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "DarkCyan"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "DarkRed"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "DarkMagenta"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "DarkYellow"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "Gray"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "DarkGray"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "Blue"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "Green"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "Cyan"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "Red"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "Magenta"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "Yellow"
+        Write-Host -ForegroundColor ${color} ${color}
+        ${color} = "White"
+        Write-Host -ForegroundColor ${color} ${color}
