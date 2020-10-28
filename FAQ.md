@@ -2,7 +2,7 @@
 Xenia Canary is a fork of Xenia with changes not present in master that may or may not fix games.
   * *[Full list of changes](https://github.com/xenia-canary/xenia-canary/projects/1)*
 #
-### How to install Title Update(s)
+### How do I install Title Update(s)?
   1. Identify Game Title ID. This can be identified by running the game in Xenia.
   <details><summary>Image (click to expand)</summary>
 
@@ -15,11 +15,19 @@ Xenia Canary is a fork of Xenia with changes not present in master that may or m
 
   3. Copy your TU file from `$TitleUpdate\[TitleID]\000B0000` to `Documents\Xenia\[TitleID]\000B0000`
 #
-### How to install the Xbox 360 dashboard
+### How do I install the Xbox 360 dashboard?
+#### Automatic *(recommended)*
+0. Prerequisites:
+      * [7-Zip](https://www.7-zip.org)
+1. [Right click this link](https://gist.githubusercontent.com/Margen67/ad7823f9e7427312c4a613d39cbdd562/raw/46435d9cdfe38116f93328a34b8cca893cbc97fd/dashboard.ps1) and save it.
+2. Right click the downloaded file and click `Run with PowerShell`.
+3. Dashboard 1888 (Blades) will be saved to the `1888.FS` folder.
+4. To run the dashboard in Xenia Canary, open `1888.FS\dash.xex`.
+#### Manual
   0. Prerequisites:
       * xextool
-      * 7-Zip
-      * Xbox 360 Dashboard 1888
+      * [7-Zip](https://www.7-zip.org)
+      * Xbox 360 Dashboard 1888 (see dashboards list)
   1. Extract the dashboard to the same directory as `xextool.exe`
   2. Open Command Prompt (or PowerShell) and run the following:
   ```
@@ -27,14 +35,14 @@ Xenia Canary is a fork of Xenia with changes not present in master that may or m
   ```
   3. Add the `.xzp` file extension to `gamercrd`, `shrdres`, and `xam`
   4. Run `dash.xex`
-
-### *TODO:* Updating from 1888
+##### *TODO:* Updating from 1888
   * **THIS REQUIRES 1888 AS A BASE!**
   * Xenia Canary can only run dashboards up to ~12625. Newer versions might not work.
 
-### Dashboards:
+##### Dashboards:
 Version | Source
 ------- | ------
+[1888](http://download.digiex.net/Consoles/Xbox360/Dashboards/2.0.1888.0%20FS.rar) | [Source](https://digiex.net/threads/xbox-360-dashboard-update-2-0-1888-0-download.6730/)
 [4552](https://web.archive.org/web/20070212052009/http://download.microsoft.com/download/d/1/8/d181ee58-de70-4484-936b-0e9161ccd6b2/HD_DVD_01-2007.zip) | [Source](https://web.archive.org/web/20070111154710/http://www.xbox.com:80/en-US/hardware/x/xbox360hddvdplayer/download.htm)
 [5759](https://web.archive.org/web/20071012204343/http://download.microsoft.com/download/d/1/8/d181ee58-de70-4484-936b-0e9161ccd6b2/HD_DVD_05-2007.zip) | [Source](https://web.archive.org/web/20070116182005/http://www.xbox.com:80/en-US/hardware/x/xbox360hddvdplayer/download.htm)
 [6683](https://web.archive.org/web/20130514173410/http://assets.xbox.com/en-us/hardware/hddvd/HD_DVD_12-2007.zip) | [Source](https://web.archive.org/web/20080210030627/http://www.xbox.com:80/en-US/hardware/x/xbox360hddvdplayer/download.htm)
