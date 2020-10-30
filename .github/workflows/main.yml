@@ -4,45 +4,18 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-latest #${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
+#        os: [windows-latest, ubuntu-latest, macos-latest]
+         artifact_num: [1]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-    - shell: pwsh
-      run: |
-        ${color} = "Black"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "DarkBlue"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "DarkGreen"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "DarkCyan"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "DarkRed"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "DarkMagenta"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "DarkYellow"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "Gray"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "DarkGray"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "Blue"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "Green"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "Cyan"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "Red"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "Magenta"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "Yellow"
-        Write-Host -ForegroundColor ${color} ${color}
-        ${color} = "White"
-        Write-Host -ForegroundColor ${color} ${color}
+      - name: Prepare artifacts
+        id: prepare_artifacts
+        run: |
+          echo "::set-output name=artifact_name::`$`{`{ steps.prepare_artifacts.outputs.artifact_${{ matrix.artifact_num `}`} }}"
+      - name: echo
+        run: echo ${{ steps.prepare_artifacts.outputs.artifact_name }}
