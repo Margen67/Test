@@ -16,6 +16,8 @@ jobs:
       - name: Prepare artifacts
         id: prepare_artifacts
         run: |
-          echo "::set-output name=artifact_name::`$`{`{ steps.prepare_artifacts.outputs.artifact_${{ matrix.artifact_num `}`} }}"
+          ${memes} = ${{ steps.prepare_artifacts.outputs.artifact_${{ matrix.artifact_num }} }}
+          echo "::set-output name=artifact_name::'${{ steps.prepare_artifacts.outputs.artifact_${{ matrix.artifact_num }} }}'
+          echo memes = ${memes}
       - name: echo
         run: echo ${{ steps.prepare_artifacts.outputs.artifact_name }}
