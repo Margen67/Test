@@ -1,6 +1,11 @@
 name: Test
 
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore:
+      - '.github/*'
+      - '.github/*_TEMPLATE/**'
+      - '*.yml'
 
 jobs:
   test:
@@ -16,8 +21,8 @@ jobs:
       - name: Prepare artifacts
         id: prepare_artifacts
         run: |
-          ${memes} = ${{ steps.prepare_artifacts.outputs.artifact_${{ matrix.artifact_num }} }}
+          $memes = ${{ steps.prepare_artifacts.outputs.artifact_${{ matrix.artifact_num }} }}
           echo "::set-output name=artifact_name::$memes"
-          echo memes = ${memes}
+          echo memes = $memes
       - name: echo
         run: echo ${{ steps.prepare_artifacts.outputs.artifact_name }}
