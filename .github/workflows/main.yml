@@ -9,20 +9,12 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest #${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-#        os: [windows-latest, ubuntu-latest, macos-latest]
-         artifact_num: [1]
+        os: [windows-latest, ubuntu-latest, macos-latest]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: Prepare artifacts
-        id: prepare_artifacts
-        run: |
-          $memes = "`$`{`{ steps.prepare_artifacts.outputs.artifact_`$`{`{ matrix.artifact_num `}`} `}`}"
-          echo "::set-output name=artifact_name::$memes"
-          echo memes = "$memes"
-      - name: echo
-        run: echo ${{ steps.prepare_artifacts.outputs.artifact_name }}
+      - run: sudo dpkg --print-architectures
