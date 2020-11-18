@@ -4,25 +4,20 @@ only_commits:
   files:
     - .appveyor.yml
 
-image:
-  - Visual Studio 1998
-  - Visual Studio 1999
-  - Visual Studio 2000
-  - Visual Studio 2001
-  - Visual Studio 2002
-  - Visual Studio 2003
-  - Visual Studio 2005
-  - Visual Studio 2008
-  - Visual Studio 2010
-  - Visual Studio 2012
-  - Visual Studio 2013
-  - Visual Studio 2015
-  - Visual Studio 2017
-  - Visual Studio 2019
+image: Visual Studio 2019
 
 clone_depth: 1
 
+environment:
+  matrix:
+    - configuration: Release
+      ARCHIVE_SUFFIX: $APPVEYOR_REPO_BRANCH
+      ARCHIVE_SWITCHES: --
+    - configuration: Debug
+      ARCHIVE_SUFFIX: $APPVEYOR_REPO_BRANCH_FOR-DEVS-ONLY
+      ARCHIVE_SWITCHES: -pI know what I am doing. --
+
 build_script:
-  - ps: '[System.Environment]::OSVersion.Version'
+  - echo %ARCHIVE_SUFFIX% %ARCHIVE_SWITCHES%
 
 test: off
