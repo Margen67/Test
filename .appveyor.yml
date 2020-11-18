@@ -11,10 +11,10 @@ clone_depth: 1
 environment:
   matrix:
     - configuration: Release
-      ARCHIVE_SUFFIX: $APPVEYOR_REPO_BRANCH
+      ARCHIVE_SUFFIX: "%APPVEYOR_REPO_BRANCH%"
       ARCHIVE_SWITCHES: --
     - configuration: Debug
-      ARCHIVE_SUFFIX: $APPVEYOR_REPO_BRANCH_FOR-DEVS-ONLY
+      ARCHIVE_SUFFIX: "%APPVEYOR_REPO_BRANCH%_FOR-DEVS-ONLY"
       ARCHIVE_SWITCHES: -pI know what I am doing. --
 
 build_script:
