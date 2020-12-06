@@ -19,5 +19,5 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - run: echo "action_state=${{ matrix.action_state }}" >> $GITHUB_ENV
-      - if: ${{ env.action_state }} == 'yellow'
+      - if: env.action_state == 'yellow'
         run: echo hi
