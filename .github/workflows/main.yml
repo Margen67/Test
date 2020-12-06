@@ -9,15 +9,18 @@ on:
 
 jobs:
   test:
+    name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [windows-latest] #, ubuntu-latest, macos-latest]
-        action_state: [yellow, red]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - run: echo "action_state=${{ matrix.action_state }}" >> $GITHUB_ENV
-      - if: env.action_state == 'yellow'
-        run: echo hi
+      - name: Set selected color
+        run: echo '::set-output name=SELECTED_COLOR::green'
+        id: random-color-generator
+      - name: Get color
+        if: steps.random-color-generator.outputs.SELECTED_COLOR == 'green'
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
