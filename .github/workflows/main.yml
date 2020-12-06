@@ -13,8 +13,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
+        os: [windows-latest] #, ubuntu-latest, macos-latest]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - run: sudo dpkg --print-architectures
+      - run: echo "action_state=yellow" >> $GITHUB_ENV
+      - if: $action_state == 'yellow'
+        run: echo hi
