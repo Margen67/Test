@@ -18,5 +18,5 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - run: echo "action_state=yellow" >> $GITHUB_ENV
-      - if: $action_state == 'yellow'
+      - if: ${action_state} == 'yellow'
         run: echo hi
