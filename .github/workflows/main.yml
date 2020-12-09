@@ -14,14 +14,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest] #, ubuntu-latest, macos-latest]
-        color: [green, red]
+        os: [ubuntu-latest] #[windows-latest, ubuntu-latest, macos-latest]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: Set selected color
-        run: echo '::set-output name=SELECTED_COLOR::${{ matrix.color }}'
-        id: random-color-generator
-      - name: Get color
-        if: steps.random-color-generator.outputs.SELECTED_COLOR == 'green'
-        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
+      -  run: ls usr/lib
