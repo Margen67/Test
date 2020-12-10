@@ -15,13 +15,15 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
-        downloader: [curl, wget]
+        extractor: [7z, unzip]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: curl
-        if: matrix.downloader == 'curl'
-        run: time curl -fLO https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
-      - name: wget
-        if: matrix.downloader == 'wget'
-        run: time wget -q https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
+      - name: download
+        run: curl -fLO https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
+      - name: 7z
+        if: matrix.extractor == '7z'
+        run: time 7z e ghidra*.zip -aos
+      - name: unzip
+        if: matrix.extractor == 'unzip'
+        run: time unzip ghidra*.zip
