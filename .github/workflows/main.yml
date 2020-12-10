@@ -15,7 +15,17 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
+        commands: [powershell, other]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - run: date -u +'%Y%m%d%H%M'
+      - name: PowerShell commands
+        if: matrix.commands == 'powershell'
+        run: |
+          Invoke-WebRequest -Uri "https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip" -OutFile "ghidra.zip"
+          Expand-Archive -path ghidra.zip -destinationpath .
+      - name: Other commands
+        if: matrix.commands == 'other'
+        run: |
+          curl -fLO https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
+          7z e ghidra*.zip -o.
