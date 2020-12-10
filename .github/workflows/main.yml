@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
+        os: [windows-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
         commands: [powershell, other]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
