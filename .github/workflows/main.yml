@@ -24,4 +24,4 @@ jobs:
         run: time curl -fLO https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
       - name: wget
         if: matrix.downloader == 'wget'
-        run: time wget https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
+        run: time wget -q https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
