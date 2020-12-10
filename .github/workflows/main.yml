@@ -26,4 +26,4 @@ jobs:
         run: time 7z e ghidra*.zip -aos
       - name: unzip
         if: matrix.extractor == 'unzip'
-        run: time unzip ghidra*.zip
+        run: time unzip -q ghidra*.zip
