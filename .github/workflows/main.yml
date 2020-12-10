@@ -15,9 +15,21 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
+        checkout: [true, false]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: bash
-        shell: bash
-        run: make
+      - name: Clone Tree
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: git clone
+        if: matrix.checkout == 'false'
+        run: git clone --recursive --depth 1 https://github.com/XboxDev/nxdk.git
+      - name: checkout
+        if: matrix.checkout == 'true'
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          repository: XboxDev/nxdk
+      - run: dir
