@@ -30,6 +30,7 @@ jobs:
         if: matrix.checkout == '1'
         uses: actions/checkout@v2
         with:
-          submodules: recursive
           repository: XboxDev/nxdk
+          path: nxdk
+          submodules: recursive
       - run: dir
