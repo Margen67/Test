@@ -18,6 +18,7 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: Clone Tree
+      - name: 1
         run: echo "action_state=yellow" >> $GITHUB_ENV
-      - run: dir
+      - name: 2
+        run: dir
