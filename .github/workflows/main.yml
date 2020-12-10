@@ -14,10 +14,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
+        os: [ubuntu-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: test
-        shell: bash
-        run: pacman
+      - run: date -u +'%Y%m%d%H%M'
