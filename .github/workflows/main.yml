@@ -20,4 +20,4 @@ jobs:
     steps:
       - name: test
         shell: bash
-        run: apt-get
+        run: pacman
