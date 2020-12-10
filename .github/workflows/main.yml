@@ -22,10 +22,10 @@ jobs:
       - name: PowerShell commands
         if: matrix.commands == 'powershell'
         run: |
-          Invoke-WebRequest -Uri "https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip" -OutFile "ghidra.zip"
-          Expand-Archive -path ghidra.zip -destinationpath .
+          Measure-Command {Invoke-WebRequest -Uri "https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip" -OutFile "ghidra.zip"}
+          Measure-Command {Expand-Archive -path ghidra.zip -destinationpath .}
       - name: Other commands
         if: matrix.commands == 'other'
         run: |
-          curl -fLO "https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip"
-          7z e ghidra*.zip -aos
+          Measure-Command {curl -fLO "https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip"}
+          Measure-Command {7z e ghidra*.zip -aos}
