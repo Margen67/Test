@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
-        checkout: [true, false]
+        checkout: [0, 1]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
@@ -24,10 +24,10 @@ jobs:
         with:
           submodules: recursive
       - name: git clone
-        if: matrix.checkout == 'false'
+        if: matrix.checkout == '0'
         run: git clone --recursive --depth 1 https://github.com/XboxDev/nxdk.git
       - name: checkout
-        if: matrix.checkout == 'true'
+        if: matrix.checkout == '1'
         uses: actions/checkout@v2
         with:
           submodules: recursive
