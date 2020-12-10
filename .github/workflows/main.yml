@@ -18,7 +18,4 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: first
-        run: echo "action_state=yellow" >> $GITHUB_ENV
-      - name: 2rd
-        run: echo $env:action_state
+      - run: wsl 
