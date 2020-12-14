@@ -14,9 +14,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
+        os: [ubuntu-latest, ubuntu-20.04] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: download
-        run: lsb_release -c
+        run: grep "UBUNTU_CODENAME" /etc/os-release
