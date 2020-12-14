@@ -18,5 +18,4 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: download
-        run: grep "UBUNTU_CODENAME" /etc/os-release
+      - run: grep -v "Codename:\	" "lsb_release -c"
