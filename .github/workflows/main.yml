@@ -19,4 +19,4 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - run: |
-        lsb_release -c | grep -v "Codename:	"
+          lsb_release -c | grep -v "Codename:	"
