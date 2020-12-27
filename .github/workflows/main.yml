@@ -18,4 +18,4 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - run: echo $(nproc)
+      - run: echo $(sysctl -n hw.logicalcpu)
