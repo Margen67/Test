@@ -14,8 +14,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, macos-11.0] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
+        os: [windows-latest] #[windows-latest, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - run: echo $(sysctl -n hw.activecpu)
+      - name: test
+        working-directory: ${{ env.ProgramData }}
+        run: dir
