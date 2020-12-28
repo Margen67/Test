@@ -20,4 +20,4 @@ jobs:
     steps:
       - name: test
         working-directory: ${{ env.ProgramData }}
-        run: ls
+        run: pwd
