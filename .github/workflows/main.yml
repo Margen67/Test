@@ -19,5 +19,4 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: |
-          echo $GITHUB_REF $env:GITHUB_REF
+        run: echo GITHUB_REF = $GITHUB_REF env:GITHUB_REF = $env:GITHUB_REF
