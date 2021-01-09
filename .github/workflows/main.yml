@@ -34,6 +34,6 @@ jobs:
         with:
           name: 2
           path: test.h
-      - run: ls
+      - run: ls -Recurse
       - uses: actions/download-artifact@v2
-      - run: ls
+      - run: ls -Recurse
