@@ -20,5 +20,5 @@ jobs:
     steps:
       - name: test
         env:
-          SHA8: ${GITHUB_SHA::8}
+          SHA8: ${GITHUB_SHA:8}
         run: echo $env:SHA8
