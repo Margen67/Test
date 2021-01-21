@@ -9,15 +9,9 @@ image: Visual Studio 2019
 clone_depth: 1
 
 environment:
-  matrix:
-    - configuration: Release
-      ARCHIVE_SUFFIX: "%APPVEYOR_REPO_BRANCH%"
-      ARCHIVE_SWITCHES: --
-    - configuration: Debug
-      ARCHIVE_SUFFIX: "%APPVEYOR_REPO_BRANCH%_FOR-DEVS-ONLY"
-      ARCHIVE_SWITCHES: -pI know what I am doing. --
+  POWERSHELL_TELEMETRY_OPTOUT: 1
 
 build_script:
-  - echo %ARCHIVE_SUFFIX% %ARCHIVE_SWITCHES%
+  - ps: echo $env:POWERSHELL_TELEMETRY_OPTOUT
 
 test: off
