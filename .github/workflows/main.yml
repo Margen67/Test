@@ -26,4 +26,4 @@ jobs:
             $GHIDRA_URL
             $XBSD_URL
           )
-          echo $URLS
+          echo ${URLS[@]}
