@@ -21,9 +21,9 @@ jobs:
       - name: test
         run: |
           declare -a URLS=(
-          $CORRETTO_URL
-          $GRADLE_URL
-          $GHIDRA_URL
-          $XBSD_URL
+            $CORRETTO_URL
+            $GRADLE_URL
+            $GHIDRA_URL
+            $XBSD_URL
           )
           echo $URLS
