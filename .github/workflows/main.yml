@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: test
         run: |
-          export memes="I'm a meme"
-          echo "lowercase = ${${{ runner.os }},,}"
-          echo "uppercase = ${${{ runner.os }}^^}"
+          export os=${{ runner.os }}
+          echo "normal = $os"
+          echo "lowercase = ${os,,}"
+          echo "uppercase = ${os^^}"
