@@ -19,5 +19,5 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        shell: bash
-        run: bash --version
+        shell: zsh {0}
+        run: zsh --version
