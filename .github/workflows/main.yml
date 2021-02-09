@@ -14,10 +14,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-2016, windows-latest, ubuntu-16.04, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
-    env:
-      POWERSHELL_TELEMETRY_OPTOUT: 1
+        os: [macos-latest, macos-11.0] #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-latest, ubuntu-20.04, macos-latest, macos-11.0]
+    #env:
+    #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
         shell: zsh {0}
-        run: zsh --version
+        run: |
+          export os=${{ runner.os }}
+          echo "lowercase = ${os:l}"
+          echo "uppercase = ${os:u}"
