@@ -19,4 +19,6 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: ls /usr/local/lib/android/sdk/build-tools/
+        run: |
+          export os_lowercase=$(echo ${{ runner.os }} | tr [:upper:] [:lower:])
+          echo $os_lowercase
