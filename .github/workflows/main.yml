@@ -19,4 +19,8 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: clang
-        run: which clang-10
+        run: |
+          which clang-8
+          which clang-9
+          which clang-10
+          which clang-11
