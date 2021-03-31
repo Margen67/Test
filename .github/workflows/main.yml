@@ -19,6 +19,4 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: clang
-        run: clang --version
-      - name: CC
-        run: $CC
+        run: which clang
