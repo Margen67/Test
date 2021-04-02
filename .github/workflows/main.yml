@@ -18,5 +18,5 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: clang
-        run: echo "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+      - name: test
+        run: echo hi
