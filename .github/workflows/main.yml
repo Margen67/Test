@@ -7,6 +7,11 @@ on:
       - '.github/*_TEMPLATE/**'
       - '*.yml'
 
+defaults:
+  run:
+    shell: bash
+    
+
 jobs:
   test:
     name: ${{ matrix.os }}
@@ -18,18 +23,4 @@ jobs:
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: test
-        run: echo "memes=yellow" >> $GITHUB_ENV
-  test_2:
-    needs: test
-    name: ${{ matrix.os }}_2
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, macos-11.0]
-    env:
-      POWERSHELL_TELEMETRY_OPTOUT: 1
-    steps:
-      - name: test
-        run: echo $memes
+      - run: echo test
