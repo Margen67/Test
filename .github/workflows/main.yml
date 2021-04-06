@@ -32,4 +32,4 @@ jobs:
       POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: echo ${{env.memes}}
+        run: echo $memes
