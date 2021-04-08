@@ -25,4 +25,4 @@ jobs:
     steps:
       - run: |
           ./script.sh
-          echo $memes
+          echo "memes = $memes"
