@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 memes=test
 echo $memes
