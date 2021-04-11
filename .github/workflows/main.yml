@@ -24,7 +24,7 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: Test 1
-        if: matrix.a != 'b' #impossible condition
+        if: matrix.a == 'b' #impossible condition
         id: test1
         run: |
           ./script.sh
