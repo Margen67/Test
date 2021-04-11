@@ -15,7 +15,7 @@ defaults:
 jobs:
   test:
     #name: ${{ matrix.os }}
-    runs-on: ubuntu-latest #${{ matrix.os }}
+    runs-on: windows-latest #${{ matrix.os }}
     #strategy:
     #  fail-fast: false
     #  matrix:
@@ -24,14 +24,4 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: Test 1
-        if: matrix.a == 'b' #impossible condition
-        id: test1
-        run: |
-          ./script.sh
-          echo "memes = $memes"
-      - name: Test 2
-        if: steps.test1.outcome != 'skipped'
-        run: echo hi
-      - name: Test 3
-        if: steps.test1.outcome == 'skipped'
-        run: echo hi
+        run: bash
