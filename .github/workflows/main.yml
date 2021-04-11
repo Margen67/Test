@@ -23,6 +23,12 @@ jobs:
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - run: |
+      - name: Test 1
+        if: matrix.a != 'b' #impossible condition
+        id: test1
+        run: |
           ./script.sh
           echo "memes = $memes"
+      - name: Test 2
+        if: steps.test1.outcome != 'skipped'
+        run: echo hi
