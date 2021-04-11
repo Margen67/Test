@@ -32,3 +32,6 @@ jobs:
       - name: Test 2
         if: steps.test1.outcome != 'skipped'
         run: echo hi
+      - name: Test 3
+        if: steps.test1.outcome == 'skipped'
+        run: echo hi
