@@ -24,4 +24,5 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: Test 1
-        run: Get-Command bash.exe
+        #shell: 
+        run: Get-Command $env:WINDIR\System32\cmd.exe
