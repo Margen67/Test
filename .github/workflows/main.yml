@@ -7,9 +7,9 @@ on:
       - '.github/*_TEMPLATE/**'
       - '*.yml'
 
-defaults:
-  run:
-    shell: bash
+#defaults:
+#  run:
+#    shell: bash
     
 
 jobs:
