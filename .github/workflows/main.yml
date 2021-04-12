@@ -24,5 +24,5 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: Test 1
-        shell: /sys64/usr/bin/bash.exe -e -o pipefail {0}
+        shell: C:\sys64\usr\bin\bash.exe -eo pipefail {0}
         run: Get-Command C:\msys64\usr\bin\bash.exe
