@@ -25,4 +25,4 @@ jobs:
     steps:
       - name: Test 1
         #shell: 
-        run: Get-Command $env:WINDIR\System32\cmd.exe
+        run: Get-Command cmd.exe
