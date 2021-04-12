@@ -25,4 +25,6 @@ jobs:
     steps:
       - name: Test 1
         shell: C:/msys64/usr/bin/bash.exe -eo pipefail {0}
-        run: Get-Command C:\msys64\usr\bin\bash.exe
+        run: |
+          pacman
+          echo hi
