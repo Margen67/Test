@@ -24,7 +24,7 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: Test 1
-        shell: C:/msys64/usr/bin/bash.exe -eo pipefail {0}
+        shell: C:/msys64/usr/bin/bash.exe -eo pipefail -lc "{0}"
         run: |
           pacman
           echo hi
