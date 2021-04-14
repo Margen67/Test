@@ -23,8 +23,4 @@ jobs:
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: Test 1
-        shell: C:/msys64/usr/bin/bash.exe -eo pipefail {0}
-        run: |
-          pacman --needed --noconfirm -S git make cmake bison flex mingw-w64-x86_64-{llvm,clang,lld}
-          pacman -Scc --noconfirm
+      - uses: actions/upload-artifact@v2-preview
