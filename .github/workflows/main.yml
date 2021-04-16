@@ -15,7 +15,7 @@ on:
 jobs:
   test:
     #name: ${{ matrix.os }}
-    runs-on: windows-latest #${{ matrix.os }}
+    runs-on: macos-10.14 #${{ matrix.os }}
     #strategy:
     #  fail-fast: false
     #  matrix:
@@ -24,4 +24,4 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: Get-Item ., ${{ runner.workspace }}
+        run: echo hi
