@@ -24,7 +24,6 @@ jobs:
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - uses: jurplel/install-qt-action@v2.13.0
-        with:
-          #version: 5.14.2
-          arch: ${{ matrix.arch }}
+      - name: test
+        run: |
+          & "$env:ProgramFiles(x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat %VC_ARCH%"
