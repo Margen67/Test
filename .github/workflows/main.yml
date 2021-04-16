@@ -25,4 +25,4 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: iscc
+        run: windeployqt
