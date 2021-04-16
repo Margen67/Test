@@ -26,4 +26,5 @@ jobs:
     steps:
       - uses: jurplel/install-qt-action@v2.13.0
         with:
-          arch: win64_msvc2017
+          #version: 5.14.2
+          arch: ${{ matrix.arch }}
