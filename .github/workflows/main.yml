@@ -25,5 +25,4 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: |
-          & "$env:ProgramFiles(x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat %VC_ARCH%"
+        run: cmd /c "$env:ProgramFiles(x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat %VC_ARCH%"
