@@ -24,4 +24,4 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: echo hi
+        run: echo "NUMBER_OF_PROCESSORS = $env:NUMBER_OF_PROCESSORS"
