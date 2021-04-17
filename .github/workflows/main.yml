@@ -16,13 +16,12 @@ jobs:
   test:
     #name: ${{ matrix.os }}
     runs-on: windows-latest #${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        arch: [win64_msvc2019_64, win64_msvc2019, win32_msvc2019, win32_msvc2019_32]
+    #strategy:
+    #  fail-fast: false
+    #  matrix:
     #    os: [windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, macos-11.0]
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: windeployqt
+        run: ls $env:ProgramFiles\OpenSSL-Win64\
