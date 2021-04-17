@@ -24,4 +24,4 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: Get-Command openssl
+        run: ls "$env:ProgramFiles\OpenSSL\bin"
