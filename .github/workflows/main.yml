@@ -24,4 +24,6 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: ls -recurse "$env:ProgramFiles\OpenSSL"
+        run: |
+          type -a gcc
+          which gcc
