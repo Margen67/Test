@@ -23,7 +23,8 @@ jobs:
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - uses: actions/upload-artifact@v2
-        with:
-          name: sources.list ${{ matrix.runs-on }}
-          path: /etc/apt/sources.list
+      - name: test
+        run: |
+          sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic main restricted'
+          sudo apt update
+          sudo apt-get -y gcc-6 g++-6
