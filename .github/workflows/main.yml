@@ -25,5 +25,7 @@ jobs:
     steps:
       - name: test
         run: |
-          type -a gcc
-          which gcc
+          type -a g++{,-9}
+          which g++{,-9}
+          type -a gcc{,-9}
+          which gcc{,-9}
