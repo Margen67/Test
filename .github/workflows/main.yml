@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: test
         run: |
+          sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic main'
+          sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic universe'
           sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic-updates main'
           sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic-updates universe'
           sudo apt update
