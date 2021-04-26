@@ -28,6 +28,6 @@ jobs:
           sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic main restricted'
           sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic main'
           sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic universe'
-          sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic multiiverse'
+          sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic multiverse'
           sudo apt update
           sudo apt-get install -y gcc-6-multilib g++-6-multilib
