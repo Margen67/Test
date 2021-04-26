@@ -16,10 +16,11 @@ jobs:
   test:
     #name: ${{ matrix.runs-on }}
     runs-on: ubuntu-latest #${{ matrix.runs-on }}
-    #strategy:
-    #  fail-fast: false
-    #  matrix:
-    #    runs-on: [ubuntu-latest, ubuntu-18.04] #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, macos-11.0]
+    strategy:
+      fail-fast: false
+      matrix:
+        updates: [no, yes]
+        #runs-on: [ubuntu-latest, ubuntu-18.04] #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, macos-11.0]
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
@@ -27,8 +28,10 @@ jobs:
         run: |
           sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic main'
           sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic universe'
-          sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic-updates main'
-          sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic-updates universe'
+          if [ '${{ matrix.updates }}' = 'yes' ]; then
+            sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic-updates main'
+            sudo add-apt-repository 'deb http://azure.archive.ubuntu.com/ubuntu/ bionic-updates universe'
+          fi
           sudo apt update
           sudo apt-get install -y gcc-6-multilib g++-6-multilib
-          gcc-6
+          gcc-6 --version
