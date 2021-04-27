@@ -24,10 +24,14 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
+        continue-on-error: true
         run: |
           declare -a suffixes=(bionic{,-updates}\ {main,universe})
           for suffix in ${suffixes[@]}; do
             sudo add-apt-repository "deb http://azure.archive.ubuntu.com/ubuntu/ $suffix"
           done
           sudo apt-get update
+          for suffix in ${suffixes[@]}; do
+            echo $suffix
+          done
 
