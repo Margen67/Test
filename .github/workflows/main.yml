@@ -27,5 +27,5 @@ jobs:
         run: |
           export distro=$(lsb_release -c)
           wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
-          sudo add-apt-repository "deb http://apt.llvm.org/${distro}/ llvm-toolchain-${distro}-12 main"
+          sudo add-apt-repository "deb http://apt.llvm.org/$distro/ llvm-toolchain-$distro-12 main"
           supd apt-get update
