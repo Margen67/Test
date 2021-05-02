@@ -11,14 +11,9 @@
       xenia-canary.exe path/to/game/default.xex --vsync=false
       ```
 #
+## *Note: Some of these are outdated*
+TODO: Note which branch(es) these options are on
 ### Canary-exclusive options:
-#### CPU:
-##### Workaround for Unreal Engine 3 titles to run:
-| `UE_Workaround` =             | `bool`
-| -----------------             | ----- 
-| On *(default)*                | `true`
-| Off *(needed for some games)* | `false`
-
 #### General:
 ##### FPS in titlebar:
 | `fps_titlebar` = | `bool`
@@ -66,7 +61,7 @@
 #### Video:
 ##### avpack (video mode):
 | `avpack` =               | `#`
-| --------                 | :-:
+| ----------               | :-:
 | HDMI *(default)*         | `8`
 | TV PAL-60                | `7`
 | VGA                      | `6`
