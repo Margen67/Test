@@ -15,13 +15,26 @@ on:
 jobs:
   test:
     #name: ${{ matrix.runs-on }}
-    runs-on: ${{ matrix.runs-on }}
-    strategy:
-      fail-fast: false
-      matrix:
-        runs-on: [windows-2016, windows-latest] #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, macos-11.0]
-    env:
-      POWERSHELL_TELEMETRY_OPTOUT: 1
+    runs-on: ubuntu-latest #${{ matrix.runs-on }}
+    #strategy:
+    #  fail-fast: false
+    #  matrix:
+    #    runs-on: [windows-2016, windows-latest] #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, macos-11.0]
+    #env:
+    #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: test
-        run: Get-Command make
+      - name: Install rdepends
+        run: |
+          sudo apt-get -y update
+          sudo apt-get -y install apt-rdepends
+      - name: Do rdepends
+        run: |
+          export dependencies=(cmake ninja-build ccache libsdl2-dev libgtk-3-dev qtbase5-dev qtbase5-dev-tools qtbase5-private-dev qt5-default qttools5-dev libegl1-mesa-dev libevdev-dev libgbm-dev libdrm-dev libwayland-dev libwayland-egl-backend-dev extra-cmake-modules libcurl4-gnutls-dev libxrandr-dev)
+          for package in ${dependencies[@]}; do
+            apt-rdepends $package > dependencies/${package}
+          done
+      - uses: actions/upload-artifact@v2
+        with:
+          name: memes
+          path: dependencies
+          if-no-files-found: error
