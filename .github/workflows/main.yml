@@ -25,5 +25,5 @@ jobs:
     steps:
       - name: test
         env:
-          meme: ${{ format('env.GITHUB_REF''refs/heads', '') }}
+          meme: "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/}): ${tag_name}"
         run: echo $env:meme
