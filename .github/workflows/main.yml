@@ -15,7 +15,7 @@ on:
 jobs:
   test:
     #name: ${{ matrix.runs-on }}
-    runs-on: ubuntu-latest #${{ matrix.runs-on }}
+    runs-on: windows-latest #${{ matrix.runs-on }}
     #strategy:
     #  fail-fast: false
     #  matrix:
@@ -23,19 +23,4 @@ jobs:
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: Install rdepends
-        run: |
-          sudo apt-get -y update
-          sudo apt-get -y install apt-rdepends
-      - name: Do rdepends
-        run: |
-          mkdir -p dependencies
-          export dependencies=(qt5-default qtmultimedia5-dev libglu1-mesa-dev)
-          for package in ${dependencies[@]}; do
-            apt-rdepends $package > dependencies/${package}
-          done
-      - uses: actions/upload-artifact@v2
-        with:
-          name: memes
-          path: dependencies
-          if-no-files-found: error
+      - name: "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/}): ${tag_name}"
