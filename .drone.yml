@@ -1,11 +1,10 @@
 ---
 kind: pipeline
-type: docker
+type: exec
 name: default
 
 steps:
 - name: test
-  image: golang
   commands:
   - echo hi
 
