@@ -25,4 +25,7 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: gcc -v
+        id: test
+        run: echo "::set-output name=name::$tag_$($env:GITHUB_REF -replace ('refs/heads/', '')"
+      - name: echo output
+        run: echo "output = ${{ steps.test.outputs.name }}"
