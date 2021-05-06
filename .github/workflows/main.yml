@@ -24,7 +24,6 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        id: test
         env:
-          meme: format(${{env.GITHUB_REF}}'refs/heads', '')
+          meme: ${{ format(${{env.GITHUB_REF}}'refs/heads', '') }}
         run: echo $env:meme
