@@ -5,7 +5,8 @@ name: default
 
 steps:
 - name: test
+  image: ubuntu:devel
   commands:
-  - echo hi
+  - lscpu
 
 ...
