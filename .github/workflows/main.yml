@@ -26,6 +26,6 @@ jobs:
     steps:
       - name: test
         id: test
-        run: echo "::set-output name=name::$tag_$($env:GITHUB_REF -replace ('refs/heads/', '')"
+        run: echo "::set-output name=name::$tag_$($env:GITHUB_REF -replace 'refs/heads/', '')"
       - name: echo output
         run: echo "output = ${{ steps.test.outputs.name }}"
