@@ -25,4 +25,6 @@ jobs:
     steps:
       - name: test
         id: test
-        run: echo $env:GITHUB_REF
+        env:
+          meme: format(${{env.GITHUB_REF}}'refs/heads', '')
+        run: echo $env:meme
