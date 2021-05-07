@@ -26,4 +26,8 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: sysctl hw.ncpu
+        run: |
+          sysctl hw.ncpu
+          sysctl hw.activecpu
+          sysctl hw.logicalcpu
+          sysctl hw.physicalcpu
