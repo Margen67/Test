@@ -26,4 +26,4 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: sysctl hw.availcpu
+        run: sysctl hw.ncpu
