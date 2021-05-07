@@ -34,7 +34,7 @@ jobs:
           mkdir -p artifacts
           export packages=(g++-multilib libboost-dev libgl-dev ninja-build)
           for package in ${packages[@]}; do
-            apt-redepends $package > artifacts/$package.txt
+            apt-rdepends $package > artifacts/$package.txt
           done
       - uses: actions/upload-artifact@v2
         with:
