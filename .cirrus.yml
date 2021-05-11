@@ -1,4 +1,4 @@
-only_if: "changesInclude('.cirrus.yml')"
+skip: !changesInclude('.cirrus.yml')
 test_task:
   container:
     image: ubuntu:latest
