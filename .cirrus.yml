@@ -1,6 +1,6 @@
 test_task:
   container:
-    image: node:latest
+    image: ubuntu:latest
     cpu: 8
     memory: 16G #32G
   test_script: echo hi
