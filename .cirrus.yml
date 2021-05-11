@@ -1,5 +1,4 @@
 test_task:
-  skip: !changesInclude('.cirrus.yml')
   container:
     image: ubuntu:latest
     cpu: 8
