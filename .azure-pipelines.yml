@@ -1,12 +1,13 @@
 trigger:
   paths:
     include:
-    - .azure-pipelines.yml
+      - .azure-pipelines.yml
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: windows-latest
+
 steps:
-- checkout: self
-  fetchDepth: 1
-- pwsh: '[System.Environment]::OSVersion.Version'
-  displayName: test
+  - checkout: self
+    fetchDepth: 1
+  - pwsh: echo "$(Build.ArtifactStagingDirectory)"
+    displayName: test
