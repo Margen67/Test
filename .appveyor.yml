@@ -12,6 +12,6 @@ environment:
   POWERSHELL_TELEMETRY_OPTOUT: 1
 
 build_script:
-  - ps: echo $0
+  - echo $0
 
 test: off
