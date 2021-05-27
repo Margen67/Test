@@ -26,4 +26,4 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: getconf _NPROCESSORS_ONLN
+        run: grep -w -c processor /proc/cpuinfo
