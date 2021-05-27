@@ -15,15 +15,15 @@ on:
 jobs:
   test:
     #name: ${{ matrix.runs-on }}
-    runs-on: ubuntu-latest #${{ matrix.runs-on }}
+    runs-on: ${{ matrix.runs-on }} #ubuntu-latest
     #container: ${{ matrix.container }}
-    #strategy:
-    #  fail-fast: false
-    #  matrix:
+    strategy:
+      fail-fast: false
+      matrix:
     #    container: ['ubuntu:devel', '']
-    #    runs-on: [ubuntu-latest, macos-latest] #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, macos-11.0]
+        runs-on: [ubuntu-latest, macos-latest] #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest, macos-11.0]
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: hostname
+        run: getconf _NPROCESSORS_ONLN
