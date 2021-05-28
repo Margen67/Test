@@ -8,11 +8,11 @@ image: macos-mojave #Visual Studio 2019
 
 clone_depth: 1
 
-environment:
+#environment:
 #  POWERSHELL_TELEMETRY_OPTOUT: 1
-  HOMEBREW_NO_ANALYTICS: 1
+#  HOMEBREW_NO_ANALYTICS: 1
 
 build_script:
-  - brew install ninja
+  - HOMEBREW_NO_ANALYTICS=1 HOMEBREW_NO_AUTO_UPDATE=1 brew install ninja
 
 test: off
