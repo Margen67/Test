@@ -13,8 +13,6 @@ environment:
   HOMEBREW_NO_ANALYTICS: 1
 
 build_script:
-  - |
-    brew update
-    brew install ninja
+  - brew install ninja
 
 test: off
