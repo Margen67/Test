@@ -31,9 +31,9 @@ Versions newer than ~13604 might not work.
 
 ### Updating
 
-0. Prerequisites
+0. Prerequisites:
     * **Completed installation**
-    * A version of xenia that works with newer dashboards: ([660559bd](https://github.com/xenia-canary/xenia-canary/releases/download/tag-660559bd372e34f62979b43fc9bf23b81f236037/xenia-canary.zip))
+    * A version of Xenia Canary that works with newer dashboards: ([660559bd](https://github.com/xenia-canary/xenia-canary/releases/download/tag-660559bd372e34f62979b43fc9bf23b81f236037/xenia-canary.zip))
       * It's recommended to run older builds with `portable.txt`. See [Options#how-to-use](https://github.com/xenia-project/xenia/wiki/Options#how-to-use)
       * To disable the annoying update message set `check_update` to `false`.
     * wxPirs
