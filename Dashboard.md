@@ -1,4 +1,8 @@
-Xenia Canary (and to some extent, master) can run the Xbox 360 dashboard.
+Certain builds of Xenia Canary can run the Xbox 360 dashboard.
+
+Dashboards have varying levels of usability. None work perfectly.
+
+Versions newer than ~13604 might not work.
 
 ### Installation
 
@@ -17,23 +21,33 @@ Xenia Canary (and to some extent, master) can run the Xbox 360 dashboard.
       * [7-Zip](https://www.7-zip.org)
       * xextool
       * Xbox 360 Dashboard 1888 (see [dashboards list](FAQ#dashboards))
-  1. Extract the dashboard to the same directory as `xextool.exe`
+  1. Extract the dashboard to the same directory as `xextool.exe`.
   2. Open Command Prompt (or PowerShell) and run the following:
       ```
       .\xextool -d . xam.xex
       ```
-  3. Add the `.xzp` file extension to `gamercrd`, `shrdres`, and `xam`
-  4. Run `dash.xex`
+  3. Add the `.xzp` file extension to `gamercrd`, `shrdres`, and `xam`.
+  4. Run `dash.xex`.
 
 ### Updating
 
-* *Updating requires version 1888 as a base.*
-* Only Dashboard versions up to ~13604 have been tested and proven to work. Versions newer than this might not work.
-* Dashboards have varying levels of usability. None work perfectly, so far.
 0. Prerequisites:
+    * **Completed installation**
+    * A version of Xenia Canary that works with newer dashboards: ([660559bd](https://github.com/xenia-canary/xenia-canary/releases/download/tag-660559bd372e34f62979b43fc9bf23b81f236037/xenia-canary.zip))
+      * It's recommended to run older builds with `portable.txt`. See [Options#how-to-use](https://github.com/xenia-project/xenia/wiki/Options#how-to-use)
+      * To disable the annoying update message set `check_update` to `false`.
+    * wxPirs
+    * 1888> dashboard from the list below
+1. Extract the downloaded dashboard.
+2. Open `su20076000_00000000` in wxPirs. (might be in $systemupdate)
+3. Extract all files into the same directory as the 1888 dashboard.
+
+To run the new dashboard open `$flash_dash.xex` in Xenia Canary.
+
+<!--0. Prerequisites:
     * [7-Zip](https://www.7-zip.org)
     * A build of xenia which works with later dashboards.
-      * [660559bd](https://github.com/xenia-canary/xenia-canary/releases/tag/tag-660559bd372e34f62979b43fc9bf23b81f236037)
+      * [660559bd](https://github.com/xenia-canary/xenia-canary/releases/download/tag-660559bd372e34f62979b43fc9bf23b81f236037/xenia-canary.zip)
     * An update file from [the list below](https://github.com/xenia-canary/xenia-canary/wiki/FAQ#dashboards)
     * wxPirs
     * Xbox 360 Dashboard 1888 (see [dashboards list](FAQ#dashboards))
@@ -41,27 +55,26 @@ Xenia Canary (and to some extent, master) can run the Xbox 360 dashboard.
 1. Extract the 1888 archive and the update archive in the same folder using 7-Zip.
 2. Extract your update files from `$SystemUpdate\su20076000_00000000` to your working directory using wxPirs.
     * You may delete the file when this process is complete.
-3. Extract XZP files from xam.xex:
-    1. If you have a file called `$flash_xam.xex`, delete `xam.xex` and rename `$flash_xam.xex` to `xam.xex`.
-        * This will ensure that the right files are extracted.
-        * You may optionally repeat this process for other `$flash_[name].xex` files as well.
-    2. Move `xextool.exe` to your working directory (with the `.xex` files)
-    3. Open Command Prompt (or PowerShell) and run the following command:
-        ```
-        .\xextool -d . xam.xex
-        ```
-        If these are successful, you should see messages like these in the console:
-        ```
-        Successfully dumped 6 resources to .
-        ```
-        You should also have several new files extracted from the xex inside the directory. Among these should be:
-          * `audio`
-          * `gamercrd`
-          * `mplayer`
-          * `shdres`
-          * `xam`
-    4. If the files that were extracted from `xam.xex` don't have the extension `.xzp` on the end, add it.
-4. Extract any other PIRS files (no extension) from the `\$SystemUpdate\` folder to your working directory using wxPIRS. (They may or may not be needed)
+    *  If you have a file called `$flash_xam.xex`, delete `xam.xex` and rename `$flash_xam.xex` to `xam.xex`.
+      * This will ensure that the right files are extracted.
+      * You may optionally repeat this process for other `$flash_[name].xex` files as well.
+3. Move `xextool.exe` to your working directory (with the `.xex` files)
+4. Open Command Prompt (or PowerShell) and run the following command:
+    ```
+    .\xextool -d . xam.xex
+    ```
+    If these are successful, you should see messages like these in the console:
+    ```
+    Successfully dumped 6 resources to .
+    ```
+    You should also have several new files extracted from the xex inside the directory. Among these should be:
+      * `audio`
+      * `gamercrd`
+      * `mplayer`
+      * `shdres`
+      * `xam`
+5. If the files that were extracted from `xam.xex` don't have the extension `.xzp` on the end, add it.
+6. Extract any other PIRS files (no extension) from the `\$SystemUpdate\` folder to your working directory using wxPIRS. (They may or may not be needed)
     * You may delete the PIRS files afterward.
     * You should now have a folder containing at LEAST these files (Usually many more):
         * $flash_dash.xex
@@ -72,28 +85,33 @@ Xenia Canary (and to some extent, master) can run the Xbox 360 dashboard.
         * shdres.xzp
         * xam.xzp
         * xam.xex
-5. Test:
+7. Test:
     1. Launch `$flash_dash.xex` with the Xenia build you downloaded.
         * If you performed step 3.1 on `$flash_dash.xex` simply use `dash.xex` instead.
 
-    Your Dashboard should launch successfully, and all sound effects should be working.
-
-    If the dashboard doesn't launch, try this:
-      1. Ensure you are using a compatible build of Xenia.
-      2. Ensure your final file structure is correct.
-      3. Launch `dash.xex` instead.
-          * Unlikely this will work. Might open 1888 instead. This means you did not patch the file correctly.
-      4. Attempt the optional steps above.
+    Your Dashboard should launch successfully, and all sound effects should be working.-->
 
 ##### Dashboards:
+<!--
+https://web.archive.org/web/20070615000000*/http://www.xbox.com/en-US/support/systemuse/xbox360/console/systemupdates.htm
+https://web.archive.org/web/20081217003323/http://www.xbox.com/en-US/support/systemupdates/default.htm
+https://web.archive.org/web/20070901000000*/http://www.xbox.com/en-US/support/systemuse/xbox360/console/softwareupdatesredirect.htm
+https://web.archive.org/web/*/http://assets.xbox.com/*
+https://web.archive.org/web/*/http://download.microsoft.com/*
+-->
 
 Version | Source
 ------- | ------
 [1888](http://download.digiex.net/Consoles/Xbox360/Dashboards/2.0.1888.0%20FS.rar) | [Source](https://digiex.net/threads/xbox-360-dashboard-update-2-0-1888-0-download.6730/)
+[4548](https://web.archive.org/web/20070103133631/http://download.microsoft.com/download/d/1/8/d181ee58-de70-4484-936b-0e9161ccd6b2/SystemUpdate_11-2006.zip) | 
 [4552](https://web.archive.org/web/20070212052009/http://download.microsoft.com/download/d/1/8/d181ee58-de70-4484-936b-0e9161ccd6b2/HD_DVD_01-2007.zip) | [Source](https://web.archive.org/web/20070111154710/http://www.xbox.com:80/en-US/hardware/x/xbox360hddvdplayer/download.htm)
 [5759](https://web.archive.org/web/20071012204343/http://download.microsoft.com/download/d/1/8/d181ee58-de70-4484-936b-0e9161ccd6b2/HD_DVD_05-2007.zip) | [Source](https://web.archive.org/web/20070116182005/http://www.xbox.com:80/en-US/hardware/x/xbox360hddvdplayer/download.htm)
 [6683](https://web.archive.org/web/20130514173410/http://assets.xbox.com/en-us/hardware/hddvd/HD_DVD_12-2007.zip) | [Source](https://web.archive.org/web/20080210030627/http://www.xbox.com:80/en-US/hardware/x/xbox360hddvdplayer/download.htm)
-[6909](https://web.archive.org/web/20090602054754/https://www.xbox.com/en-US/hardware/x/xbox360hddvdplayer/download.htm) | [Source](https://web.archive.org/web/20090602054754/https://www.xbox.com/en-US/hardware/x/xbox360hddvdplayer/download.htm)
+[6690](https://web.archive.org/web/20090602054754/http://assets.xbox.com/en-us/hardware/hddvd/$Systemupdate_Fall07.zip) | [Source](https://web.archive.org/web/20090602054754/https://www.xbox.com/en-US/hardware/x/xbox360hddvdplayer/download.htm)
+[7357](https://web.archive.org/web/20110430070604/http://download.microsoft.com/download/D/1/8/D181EE58-DE70-4484-936B-0E9161CCD6B2/$SystemUpdate_Fall08.zip) | 
+[7363](https://web.archive.org/web/20120915104740/http://download.microsoft.com/download/D/1/8/D181EE58-DE70-4484-936B-0E9161CCD6B2/$SystemUpdate_Fall08_7363.zip) | 
+[7371](https://web.archive.org/web/20110328234121/http://download.microsoft.com/download/D/1/8/D181EE58-DE70-4484-936B-0E9161CCD6B2/$SystemUpdate_Fall08_7371.zip) | 
+[8955](https://web.archive.org/web/20101225052105/http://download.microsoft.com/download/D/1/8/D181EE58-DE70-4484-936B-0E9161CCD6B2/$SystemUpdate_Fall09_8955.zip) | 
 [9199](https://web.archive.org/web/20101027072835/https://download.microsoft.com/download/1/d/8/1d8c09be-278e-41cd-98be-eb9188128227/$systemupdate9199.zip) | [Source](https://web.archive.org/web/20101027072835/https://support.xbox.com/en-us/pages/xbox-360/how-to/update-xbox-360/system-updates.aspx#copy)
 [12611](https://web.archive.org/web/20110113044414/http://download.microsoft.com/download/1/4/6/146DC573-E0D9-4357-9D85-5A7DEC443050/systemupdate.zip) |
 [12625](https://web.archive.org/web/20110503185828/https://download.microsoft.com/download/4/B/5/4B502530-BC35-4477-B25A-AEFDCFB7F504/SystemUpdate_12625_USB.zip) | [Source](https://web.archive.org/web/20110123134623/http://support.xbox.com:80/en-US/pages/xbox-360/how-to/update-xbox-360/system-updates.aspx#copy)
