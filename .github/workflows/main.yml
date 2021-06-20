@@ -27,8 +27,8 @@ jobs:
     steps:
       - name: Verify Default Environment 
         run: |
-          echo "GITHUB_REPOSITORY = ${{ GITHUB_REPOSITORY }}"
-          echo "GH_REPO = ${{ GH_REPO }}"
+          echo "GITHUB_REPOSITORY = $GITHUB_REPOSITORY"
+          echo "GH_REPO = $GH_REPO"
       - name: Test Margen67 Method
         env:
           GH_REPO: ${{ env.GITHUB_REPOSITORY }}
