@@ -25,7 +25,19 @@ jobs:
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: test
+      - name: Verify Default Environment 
+        run: |
+          echo "GITHUB_REPOSITORY = ${{ GITHUB_REPOSITORY }}"
+          echo "GH_REPO = ${{ GH_REPO }}"
+      - name: Test Margen67 Method
         env:
           GH_REPO: ${{ env.GITHUB_REPOSITORY }}
         run: echo "GITHUB_REPOSITORY = $GH_REPO"
+      - name: Test RadWolfie Method
+        env:
+          GH_REPO: ${{ GITHUB_REPOSITORY }}
+        run: echo "GH_REPO = $GH_REPO"
+      - name: Test Official Alternative Method
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: echo "GH_REPO = $GH_REPO"
