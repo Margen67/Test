@@ -27,5 +27,5 @@ jobs:
     steps:
       - name: test
         env:
-          GH_REPO: ${env.GITHUB_REPOSITORY}
+          GH_REPO: ${ env.GITHUB_REPOSITORY }
         run: echo "GITHUB_REPOSITORY = $GH_REPO"
