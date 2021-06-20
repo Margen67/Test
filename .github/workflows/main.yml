@@ -1,6 +1,5 @@
 name: Test
 
-
 on:
   push:
     paths-ignore:
@@ -33,10 +32,8 @@ jobs:
       - name: Test Margen67 Method
         env:
           GH_REPO: ${{ env.GITHUB_REPOSITORY }}
-        run: echo "GITHUB_REPOSITORY = $GH_REPO"
-      - name: Test RadWolfie Method
-        env:
-          GH_REPO: ${{ GITHUB_REPOSITORY }}
+        run: echo "GH_REPO = $GH_REPO"
+      - name: Test After Margen67 Method Step
         run: echo "GH_REPO = $GH_REPO"
       - name: Test Official Alternative Method
         env:
