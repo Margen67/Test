@@ -39,3 +39,16 @@ jobs:
         env:
           GH_REPO: ${{ github.repository }}
         run: echo "GH_REPO = $GH_REPO"
+      - name: Test Github Environment
+        env:
+          GHT_REPOSITORY: ${{ env.GITHUB_REPOSITORY }}
+          GHT_REPO: ${{ env.GH_REPO }}
+          GHT_TOKEN: ${{ env.GITHUB_TOKEN }}
+          GHT_SHA: ${{ env.GITHUB_SHA }}
+          GHT_REF: ${{ env.GITHUB_REF }}
+        run: |
+          echo "GITHUB_REPOSITORY = $GHT_REPOSITORY"
+          echo "GH_REPO = $GHT_REPO"
+          echo "GITHUB_TOKEN = $GHT_TOKEN"
+          echo "GITHUB_SHA = $GHT_SHA"
+          echo "GITHUB_REF = $GHT_REF"
