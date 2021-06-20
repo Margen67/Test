@@ -26,6 +26,6 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        env:
-          test_envvar: ${{env.GITHUB_REPOSITORY}}
-        run: echo "GITHUB_REPOSITORY = $test_envvar"
+        run: |
+          export test_var=$GITHUB_REPOSITORY
+          echo "GITHUB_REPOSITORY = $test_var"
