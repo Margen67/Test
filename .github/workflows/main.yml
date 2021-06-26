@@ -16,15 +16,21 @@ jobs:
     #name: ${{ matrix.runs-on }}
     runs-on: ubuntu-latest #${{ matrix.runs-on }}
     #container: ${{ matrix.container }}
-    #strategy:
-    #  fail-fast: false
-    #  matrix:
+    strategy:
+      fail-fast: false
+      matrix:
+        ghidra.version:
+          - 10.0
+          - 10.0.0-beta
+          - 9.2.4
+          - 9.2.2
+          - 9.2.1
+          - 9.2
+          - 9.1.2
     #    container: ['ubuntu:devel', '']
     #    runs-on: #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest] #macos-11.0
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        env:
-          GH_REPO: ${{ env.GITHUB_REPOSITORY }}
         run: echo "GITHUB_REPOSITORY = $GH_REPO"
