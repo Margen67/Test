@@ -25,4 +25,7 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: sha256sum
+        run: |
+          curl -sSfLO https://www.autoitscript.com/autoit3/scite/download/Au3Stripper.zip
+          Expand-Archive Au3Stripper.zip "${env:ProgramFiles(x86)}\AutoIt3\SciTE\au3Stripper" -Force
+          Get-Item "${env:ProgramFiles(x86)}\AutoIt3\SciTE\au3Stripper"
