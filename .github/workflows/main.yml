@@ -27,5 +27,5 @@ jobs:
       - name: test
         run: |
           curl -sSfLO https://www.autoitscript.com/autoit3/scite/download/Au3Stripper.zip
-          Expand-Archive Au3Stripper.zip "${env:ProgramFiles(x86)}\AutoIt3\SciTE\au3Stripper" -Force
+          Expand-Archive Au3Stripper.zip "${env:ProgramFiles(x86)}\AutoIt3\SciTE\au3Stripper"
           Get-ChildItem "${env:ProgramFiles(x86)}\AutoIt3\SciTE\au3Stripper"
