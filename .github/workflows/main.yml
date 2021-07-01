@@ -26,6 +26,5 @@ jobs:
     steps:
       - name: test
         run: |
-          echo before: $(ls)
           sha256sum -b dghffghfgh > test.a
-          echo after: $(ls)
+          7z a test.zip test.a
