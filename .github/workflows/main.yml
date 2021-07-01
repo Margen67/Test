@@ -25,4 +25,7 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: test
-        run: sha256sum -b dghffghfgh > test.a
+        run: |
+          echo before: $(ls)
+          sha256sum -b dghffghfgh > test.a
+          echo after: $(ls)
