@@ -26,5 +26,5 @@ jobs:
     steps:
       - name: test
         run: |
-          sha256sum -b dghffghfgh > test.a && `
-          7z a test.zip test.a
+          7z a test.zip nothing
+          Get-Item test.zip
