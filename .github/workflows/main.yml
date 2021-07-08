@@ -6,7 +6,7 @@ on:
       - '.github/*'
       - '.github/*_TEMPLATE/**'
       - '*.yml'
-      - 'a/**'
+      - 'a/'
 
 #defaults:
 #  run:
