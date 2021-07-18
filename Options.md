@@ -3,7 +3,6 @@
 ---
 ### How to use:
 Same as master (see above) but the filenames are different:
-
 Description | Filename
 ----------- | --------
 Executable  | `xenia_canary.exe` (older builds are called `xenia-canary.exe`)
