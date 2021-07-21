@@ -5,7 +5,7 @@ Dashboards have varying levels of usability. None work perfectly.
 Versions newer than ~13604 might not work.
 
 ### Installation
-
+<!--
 #### Automatic *(recommended)*
 
 0. Prerequisites:
@@ -16,11 +16,11 @@ Versions newer than ~13604 might not work.
 4. To run the dashboard in Xenia Canary, open `1888.FS\dash.xex`.
 
 #### Manual
-
+-->
   0. Prerequisites:
       * [7-Zip](https://www.7-zip.org)
       * xextool
-      * Xbox 360 Dashboard 1888 (see [dashboards list](FAQ#dashboards))
+      * Xbox 360 Dashboard 1888
   1. Extract the dashboard to the same directory as `xextool.exe`.
   2. Open Command Prompt (or PowerShell) and run the following:
       ```
@@ -50,7 +50,7 @@ To run the new dashboard open `$flash_dash.xex` in Xenia Canary.
       * [660559bd](https://github.com/xenia-canary/xenia-canary/releases/download/tag-660559bd372e34f62979b43fc9bf23b81f236037/xenia-canary.zip)
     * An update file from [the list below](https://github.com/xenia-canary/xenia-canary/wiki/FAQ#dashboards)
     * wxPirs
-    * Xbox 360 Dashboard 1888 (see [dashboards list](FAQ#dashboards))
+    * Xbox 360 Dashboard 1888
     * xextool
 1. Extract the 1888 archive and the update archive in the same folder using 7-Zip.
 2. Extract your update files from `$SystemUpdate\su20076000_00000000` to your working directory using wxPirs.
@@ -102,7 +102,6 @@ https://web.archive.org/web/*/http://download.microsoft.com/*
 
 Version | Source
 ------- | ------
-[1888](http://download.digiex.net/Consoles/Xbox360/Dashboards/2.0.1888.0%20FS.rar) | [Source](https://digiex.net/threads/xbox-360-dashboard-update-2-0-1888-0-download.6730/)
 [4548](https://web.archive.org/web/20070103133631/http://download.microsoft.com/download/d/1/8/d181ee58-de70-4484-936b-0e9161ccd6b2/SystemUpdate_11-2006.zip) | 
 [4552](https://web.archive.org/web/20070212052009/http://download.microsoft.com/download/d/1/8/d181ee58-de70-4484-936b-0e9161ccd6b2/HD_DVD_01-2007.zip) | [Source](https://web.archive.org/web/20070111154710/http://www.xbox.com:80/en-US/hardware/x/xbox360hddvdplayer/download.htm)
 [5759](https://web.archive.org/web/20071012204343/http://download.microsoft.com/download/d/1/8/d181ee58-de70-4484-936b-0e9161ccd6b2/HD_DVD_05-2007.zip) | [Source](https://web.archive.org/web/20070116182005/http://www.xbox.com:80/en-US/hardware/x/xbox360hddvdplayer/download.htm)
