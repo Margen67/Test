@@ -5,18 +5,6 @@ Dashboards have varying levels of usability. None work perfectly.
 Versions newer than ~13604 might not work.
 
 ### Installation
-<!--
-#### Automatic *(recommended)*
-
-0. Prerequisites:
-    * [7-Zip](https://www.7-zip.org)
-1. [Right click this link](https://gist.githubusercontent.com/Margen67/ad7823f9e7427312c4a613d39cbdd562/raw/dashboard.ps1) and save it.
-2. Right click the downloaded file and click `Run with PowerShell`.
-3. Dashboard 1888 (Blades) will be saved to the `1888.FS` folder.
-4. To run the dashboard in Xenia Canary, open `1888.FS\dash.xex`.
-
-#### Manual
--->
   0. Prerequisites:
       * [7-Zip](https://www.7-zip.org)
       * xextool
