@@ -15,20 +15,15 @@ on:
 jobs:
   test:
     #name: ${{ matrix.runs-on }}
-    runs-on: ubuntu-18.04 #${{ matrix.runs-on }}
+    runs-on: ubuntu-latest #${{ matrix.runs-on }}
     #container: ${{ matrix.container }}
-    strategy:
-      fail-fast: false
-      matrix:
-        qt-ver: [5, 4]
+    #strategy:
+    #  fail-fast: false
+    #  matrix:
     #    container: ['ubuntu:devel', '']
     #    runs-on: #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest] #macos-11.0
     #env:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - name: Setup
-        run: |
-          sudo apt-get update
-          sudo apt-get install libbotan1.10-dev qt${{ matrix.qt-ver }}-{default,qmake}
-      - name: Build
-        run: qmake
+      - name: test
+        run: python
