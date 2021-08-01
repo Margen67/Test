@@ -57,6 +57,13 @@ Signed in+Xbox Live   | 2
 `width` =  | `1280` *(default)*
 
 #### Video:
+##### Vsync interval:
+`vsync_interval` = | `#`
+------------------ | :-:
+x1                 | 16 (default)
+Value is frametime in milliseconds.
+
+
 ##### avpack (video mode):
 `avpack` =               | `#`
 ----------               | :-:
