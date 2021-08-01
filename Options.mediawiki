@@ -1,0 +1,152 @@
+__TOC__
+
+''[https://github.com/xenia-project/xenia/wiki/Options Xenia Master Options]''
+
+=== How to use ===
+
+{|
+! Description
+! Filename
+|-
+| Executable
+| <code>xenia_canary.exe</code> (older builds are called <code>xenia-canary.exe</code>)
+|-
+| config
+| <code>xenia-canary-config.toml</code>
+|}
+
+''Note: Some of these options are outdated''
+<!--TODO: Note which branches these options are on-->
+==== General ====
+===== FPS in titlebar =====
+{|
+! <code>fps_titlebar</code> = 
+! <code>bool</code>
+|-
+| On ''(default)''
+| <code>true</code>
+|-
+| Off
+| <code>false</code>
+|}
+
+==== HID ====
+===== Keyboard passthrough =====
+Maybe useful for debug games, disables keyboard->gamepad emulation, and forwards exact keyboard events to guest. Note that keybinds, eg. H to show FPS, will still be in effect.
+{|
+! <code>keyboard_passthru</code> = 
+! <code>bool</code>
+|-
+| Off ''(default)''
+| <code>false</code>
+|-
+| On
+| <code>true</code>
+|}
+
+===== Send keyup events when keys are released when using passthru. =====
+Some games like Saints Row 1 don't like seeing these, but the dashboard won't work properly without them:
+{|
+! <code>keyboard_keyup</code> = 
+! <code>bool</code>
+|-
+| On ''(default)''
+| <code>true</code>
+|-
+| Off
+| <code>false</code>
+|}
+
+==== Kernel ====
+===== Dashboard initial setup/OOBE =====
+{|
+! <code>xconfig_initial_setup</code> = 
+! <code>bool</code>
+|-
+| Off ''(default)''
+| <code>false</code>
+|-
+| On
+| <code>true</code>
+|}
+
+==== Profiles ====
+===== Signin state of (user_0-3) =====
+{|
+! <code>user_#_state</code> = 
+! <code>#</code>
+|-
+| Signed out
+| <code>0</code>
+|-
+| Signed in ''(default)''
+| <code>1</code>
+|-
+| Signed in+Xbox Live
+| <code>2</code>
+|}
+
+===== XUID of (user_0-3) =====
+{|
+! <code>user_#_xuid</code> = 
+! <code>E0...#</code>
+|}
+
+==== UI ====
+===== Window height/width =====
+{|
+! <code>window_</code>
+!
+|-
+| <code>height</code> =
+| <code>#</code> ''(default = <code>1280</code>)''
+|-
+| <code>width</code>  =
+| <code>#</code> ''(default = <code>720</code>)''
+|}
+
+==== Video ====
+===== Vsync interval =====
+{|
+! <code>vsync_interval</code> = 
+! <code>#</code> (frametime in milliseconds)
+|-
+| x1 ''(60fps, default)''
+| <code>16</code>
+|-
+| x2 ''(120fps; 60fps for 30fps games)''
+| <code>8</code>
+|}
+
+===== avpack (video mode) =====
+{|
+! <code>avpack</code> = 
+! <code>#</code>
+|-
+| HDMI ''(default)''
+| <code>8</code>
+|-
+| TV PAL-60
+| <code>7</code>
+|-
+| VGA
+| <code>6</code>
+|-
+| PAL-60 Composite/S-Video
+| <code>5</code>
+|-
+| HDMI+A
+| <code>4</code>
+|-
+| 480p Component(HD)
+| <code>3</code>
+|-
+| PAL-60 SCART
+| <code>2</code>
+|-
+|
+| <s><code>1</code></s>
+|-
+| PAL-60 Component(SD)
+| <code>0</code>
+|}
