@@ -2,8 +2,7 @@ __TOC__
 
 ''[https://github.com/xenia-project/xenia/wiki/Options Xenia Master Options]''
 
-=== How to use ===
-
+= How to use =
 {|
 ! Description
 ! Filename
@@ -17,8 +16,8 @@ __TOC__
 
 ''Note: Some of these options are outdated''
 <!--TODO: Note which branches these options are on-->
-==== General ====
-===== FPS in titlebar =====
+== General ==
+=== FPS in titlebar ===
 {|
 ! <code>fps_titlebar</code> = 
 ! <code>bool</code>
@@ -30,8 +29,8 @@ __TOC__
 | <code>false</code>
 |}
 
-==== HID ====
-===== Keyboard passthrough =====
+== HID ==
+=== Keyboard passthrough ===
 Maybe useful for debug games, disables keyboard->gamepad emulation, and forwards exact keyboard events to guest. Note that keybinds, eg. H to show FPS, will still be in effect.
 {|
 ! <code>keyboard_passthru</code> = 
@@ -44,7 +43,7 @@ Maybe useful for debug games, disables keyboard->gamepad emulation, and forwards
 | <code>true</code>
 |}
 
-===== Send keyup events when keys are released when using passthru. =====
+=== Send keyup events when keys are released when using passthru. ===
 Some games like Saints Row 1 don't like seeing these, but the dashboard won't work properly without them:
 {|
 ! <code>keyboard_keyup</code> = 
@@ -57,8 +56,8 @@ Some games like Saints Row 1 don't like seeing these, but the dashboard won't wo
 | <code>false</code>
 |}
 
-==== Kernel ====
-===== Dashboard initial setup/OOBE =====
+== Kernel ==
+=== Dashboard initial setup/OOBE ===
 {|
 ! <code>xconfig_initial_setup</code> = 
 ! <code>bool</code>
@@ -70,8 +69,8 @@ Some games like Saints Row 1 don't like seeing these, but the dashboard won't wo
 | <code>true</code>
 |}
 
-==== Profiles ====
-===== Signin state of (user_0-3) =====
+== Profiles ==
+=== Signin state of (user_0-3) ===
 {|
 ! <code>user_#_state</code> = 
 ! <code>#</code>
@@ -86,14 +85,14 @@ Some games like Saints Row 1 don't like seeing these, but the dashboard won't wo
 | <code>2</code>
 |}
 
-===== XUID of (user_0-3) =====
+=== XUID of (user_0-3) ===
 {|
 ! <code>user_#_xuid</code> = 
 ! <code>E0...#</code>
 |}
 
-==== UI ====
-===== Window height/width =====
+== UI ==
+=== Window height/width ===
 {|
 ! <code>window_</code>
 !
@@ -105,8 +104,8 @@ Some games like Saints Row 1 don't like seeing these, but the dashboard won't wo
 | <code>#</code> ''(default = <code>720</code>)''
 |}
 
-==== Video ====
-===== Vsync interval =====
+== Video ==
+=== Vsync interval ===
 {|
 ! <code>vsync_interval</code> = 
 ! <code>#</code> (frametime in milliseconds)
@@ -118,7 +117,7 @@ Some games like Saints Row 1 don't like seeing these, but the dashboard won't wo
 | <code>8</code>
 |}
 
-===== avpack (video mode) =====
+=== avpack (video mode) ===
 {|
 ! <code>avpack</code> = 
 ! <code>#</code>
