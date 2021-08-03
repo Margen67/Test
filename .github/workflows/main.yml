@@ -27,6 +27,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           $branch="canary_pr"
           If ($branch -eq "canary_pr" -or $branch -eq "canary_experimental")
