@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: test
-        env:
+        env: #a
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           $branch="canary_pr"
