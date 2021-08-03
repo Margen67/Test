@@ -13,6 +13,7 @@ canary_base         | Base branch for above branches. (newest)
 canary-new          | Newer than old-update.
 canary-old-update   | Old, but newer branch. (has some features newer branches don't)
 canary-old          | Old canary branch.
+canary-linux        | TODO.
 canary              | TODO.
 clockfreq-test      | TODO.
 fixups              | TODO.
