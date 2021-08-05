@@ -1,0 +1,107 @@
+__TOC__
+
+''[https://github.com/xenia-project/xenia/wiki/FAQ Xenia Master FAQ]''
+
+= What is the difference between Xenia Canary and Xenia master? =
+
+Xenia Canary is a fork of Xenia with changes not present in master that may or may not fix games.
+* ''[https://github.com/xenia-canary/xenia-canary/projects/1 Full list of changes]''
+
+= What's the difference between canary_experimental, etc? =
+Most branches serve a specific purpose. For example, <code>canary_pr</code> only has changes with an open pull request on xenia master.
+{|
+! Branch
+! Purpose
+|-
+| canary_experimental
+| Changes that don't have a PR open.
+|-
+| canary_pr
+| Changes that have a PR open; see [https://github.com/xenia-canary/xenia-canary/projects/2 Pull Request Status].
+|-
+| canary_base
+| Base branch for above branches. (newest)
+|-
+| canary-new
+| Newer than old-update.
+|-
+| canary-old-update
+| Old, but newer branch. (has some features newer branches don't)
+|-
+| canary-old
+| Old canary branch.
+|-
+| canary-linux
+| TODO.
+|-
+| canary
+| TODO.
+|-
+| clockfreq-test
+| TODO.
+|-
+| fixups
+| TODO.
+|-
+| import-libraries
+| TODO.
+|-
+| new_dashboard_run
+| Can run the dashboard. (outdated?)
+|-
+| qt-graphics-window
+| TODO.
+|-
+| qt-settings-impl
+| TODO.
+|-
+| canary-FFmpeg
+| TODO.
+|-
+| qt-updated
+| TODO.
+|-
+| stfs-headers-new
+| TODO.
+|-
+| <s>master</s>
+|
+|-
+| <s>gh-pages</s>
+|
+|-
+| <s>systemlink</s>
+|
+|-
+| <s>setthreaddesc</s>
+|
+|-
+| <s>gen_tests</s>
+|
+|-
+| <s>x64-cleanup</s>
+|
+|-
+| <s>qt</s>
+|
+|-
+| <s>texsplit</s>
+|
+|-
+| <s>crash_dumps</s>
+|
+|-
+| <s>vtx_cache</s>
+|
+|-
+| <s>linux</s>
+|
+|}
+
+= How do I install Title Updates? =
+# Identify Game Title ID. This can be identified by running the game in Xenia. [https://i.imgur.com/Vhz9sCC.png (click for image)]
+# Locate your TU folder from your removable storage. [https://i.imgur.com/M4R1SyZ.png (click for image)]
+# Copy your TU file from <code>$TitleUpdate\[TitleID]\000B0000</code> to <code>Documents\Xenia\[TitleID]\000B0000</code>
+
+= How do I run the Xbox 360 dashboard? =
+See [[Dashboard#installation]].
