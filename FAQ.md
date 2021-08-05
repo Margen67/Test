@@ -8,7 +8,7 @@ Most branches serve a specific purpose. For example, `canary_pr` only has change
 Branch              | Purpose
 ------              | -------
 canary_experimental | Changes that don't have a PR open.
-canary_pr           | Changes that have a PR open.
+canary_pr           | Changes that have a PR open; see [Pull Request Status](https://github.com/xenia-canary/xenia-canary/projects/2).
 canary_base         | Base branch for above branches. (newest)
 canary-new          | Newer than old-update.
 canary-old-update   | Old, but newer branch. (has some features newer branches don't)
