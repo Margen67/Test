@@ -1,6 +1,6 @@
 __TOC__
 
-''[https://github.com/xenia-project/xenia/wiki/FAQ Xenia Master FAQ]''
+''[https://github.com/xenia-project/xenia/wiki/FAQ Xenia Master FAQ]'' | '''Xenia Canary FAQ'''
 
 = What is the difference between Xenia Canary and Xenia master? =
 
