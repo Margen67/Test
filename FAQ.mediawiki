@@ -1,6 +1,6 @@
-__TOC__
-
 ''[https://github.com/xenia-project/xenia/wiki/FAQ Xenia Master FAQ]'' | '''Xenia Canary FAQ'''
+
+__TOC__
 
 = What is the difference between Xenia Canary and Xenia master? =
 
