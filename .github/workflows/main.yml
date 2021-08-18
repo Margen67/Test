@@ -27,4 +27,9 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        run: echo "$GITHUB_PATH"
+        run: |
+          mkdir -p test
+          echo "echo hi" > test/meme
+          echo "a:test" >> $GITHUB_PATH
+      - name: test2
+        run: meme
