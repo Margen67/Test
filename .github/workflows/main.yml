@@ -27,10 +27,4 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        run: |
-          mkdir -p test
-          echo "echo hi" > test/meme
-          chmod +x test test/meme
-          echo "a:test" >> $GITHUB_PATH
-      - name: test2
-        run: meme
+        run: vcpkg
