@@ -24,9 +24,7 @@ jobs:
     #    runs-on: #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest] #macos-11.0
     env:
       POWERSHELL_TELEMETRY_OPTOUT: 1
-
-      a: a
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        run: vswhere
+        run: echo "$GITHUB_PATH"
