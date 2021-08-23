@@ -28,5 +28,5 @@ jobs:
       #- uses: actions/checkout@v2
       - name: test
         run: |
-          type -a gcc
-          type -a g++
+          gcc --version
+          clang --version
