@@ -27,4 +27,9 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        run: $(nproc)
+        run: |
+          brew install openal-soft 1> /dev/null
+          export FILE="OpenAL/alc.h"
+          if [[ -f "$FILE" ]]; then
+            echo "$FILE exists."
+          fi
