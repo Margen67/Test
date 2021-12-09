@@ -143,9 +143,20 @@ Some games like Saints Row 1 don't like seeing these, but the dashboard won't wo
 | PAL-60 SCART
 | <code>2</code>
 |-
-|
+| Unused
 | <s><code>1</code></s>
 |-
 | PAL-60 Component(SD)
 | <code>0</code>
+|}
+
+== Audio ==
+=== Max queued frames ===
+Allows changing max buffered audio frames to reduce audio delay.
+{|
+! <code>max_queued_frames</code> = 
+! <code>#</code>
+|-
+| Default
+| <code>64</code>
 |}
