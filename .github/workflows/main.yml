@@ -27,4 +27,4 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        run: ls C:\
+        run: ls C:\tools
