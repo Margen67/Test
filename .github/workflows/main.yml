@@ -27,6 +27,8 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        run: echo "SHORT_SHA=$(${env:GITHUB_SHA}.SubString(0,7))" >> $GITHUB_ENV
+        run: |
+          echo $env:GITHUB_SHA.SubString(0,7)
+#          echo "SHORT_SHA=$(${env:GITHUB_SHA}.SubString(0,7))" >> $GITHUB_ENV
       - name: test2
         run: echo $env:SHORT_SHA
