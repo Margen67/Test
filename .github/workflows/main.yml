@@ -29,6 +29,7 @@ jobs:
       - name: test
         run: |
           $SHORT_SHA=$env:GITHUB_SHA.SubString(0,7)
+          echo $SHORT_SHA
           echo "SHORT_SHA=$SHORT_SHA" >> $GITHUB_ENV
       - name: test2
         run: echo $env:SHORT_SHA
