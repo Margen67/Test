@@ -27,4 +27,4 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        run: echo "${BASH_VERSION::1}"
+        run: echo ${string/%abc/abcdefabc1abc}
