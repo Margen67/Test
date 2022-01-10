@@ -27,4 +27,6 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        run: echo ${string/%abc/abcdefabc1abc}
+        run: |
+          string=abcdefabc1abc
+          echo ${string/%abc/2}
