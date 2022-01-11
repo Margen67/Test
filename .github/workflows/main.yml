@@ -32,6 +32,6 @@ jobs:
         run: |
           sourceLabelsJson64=$(curl -s -H "Accept: application/vnd.github.symmetra-preview+json" -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/xenia-project/game-compatibility/labels?per_page=5 | jq '[ .[] | { "name": .name } ]' | jq -r '.[] | @base64' )
           for sourceLabelJson64 in $sourceLabelsJson64; do
-              sourceLabelJson=$(echo ${sourceLabelJson64} | base64 --decode | jq -r '.')
+              sourceLabelJson=$(echo ${sourceLabelJson64} | base64 --decode | jq -r '.name')
               echo $sourceLabelJson
           done
