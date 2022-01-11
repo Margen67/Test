@@ -35,5 +35,6 @@ jobs:
               sourceLabelJson=$(echo ${sourceLabelJson64} | base64 -d | jq -r '.name')
               labels+=("$sourceLabelJson")
           done
-            echo "${labels[@]}"
-            echo "${labels[*]}"
+          for label in "${labels[@]}"; do
+            echo "$label"
+          done
