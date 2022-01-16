@@ -27,7 +27,4 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        id: git
-        run: echo "::set-output name=tag_name::CI-($env:GITHUB_SHA.Substring(0,7))"
-      - name: echo
-        run: echo "${{ steps.git.outputs.tag_name }}"
+        run: echo "$env:GITHUB_EVENT_NAME"
