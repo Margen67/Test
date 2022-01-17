@@ -29,6 +29,4 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        env:
-          GH_REPO: ${{ github.repository }}
-        run: echo "${{ github.repository }}"
+        run: echo Issue is invalid.
