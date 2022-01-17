@@ -28,5 +28,7 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       #- uses: actions/checkout@v2
-      - run: echo "event name is:" ${{ github.event_name }}
-      - run: echo "event type is:" ${{ github.event.action }}
+      - name: test
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: echo "${{ github.repository }}"
