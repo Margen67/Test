@@ -31,8 +31,8 @@ jobs:
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: | ##--jq '.data.repository.labels.nodes[].name'
-          gh api graphql --paginate -f query='
+        run: | # --jq '.data.repository.issues.nodes[].title'  --jq '.data.repository.labels.nodes[].name'
+          gh api graphql --paginate --jq '.data.repository.issues.nodes[].title' -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
                 labels(first:100, after:$endCursor) {
@@ -54,22 +54,22 @@ jobs:
                 }
               }
             }
+          ' > test_dual.json
+          gh api graphql --paginate --jq '.data.repository.issues.nodes[].title' -f query='
+            query($endCursor: String) {
+              repository(name: "game-compatibility", owner: "xenia-project") {
+                issues(first:100, states:OPEN, after:$endCursor) {
+                  nodes { title }
+                  pageInfo {
+                    hasNextPage
+                    endCursor
+                  }
+                }
+              }
+            }
           ' > test.json
-#          gh api graphql --paginate --jq '.data.repository.issues.nodes[].title' -f query='
-#            query($endCursor: String) {
-#              repository(name: "game-compatibility", owner: "xenia-project") {
-#                issues(first:100, states:OPEN, after:$endCursor) {
-#                  nodes { title }
-#                  pageInfo {
-#                    hasNextPage
-#                    endCursor
-#                  }
-#                }
-#              }
-#            }
-#          '
       - uses: actions/upload-artifact@v2
         with:
           name: test
-          path: test.json
+          path: '*.json'
           if-no-files-found: error
