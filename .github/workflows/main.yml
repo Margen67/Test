@@ -32,5 +32,16 @@ jobs:
         env:
           issue_body: ${{ github.event.issue.body }}
         run: |
-          issue_body_lowercase=${issue_body,,}
-          echo "$issue_body_lowercase"
+          gh api graphql --paginate -f query='
+            query($endCursor: String) {
+              viewer {
+                repositories(first: 100, after: $endCursor) {
+                  nodes { nameWithOwner }
+                  pageInfo {
+                    hasNextPage
+                    endCursor
+                  }
+                }
+              }
+            }
+          '
