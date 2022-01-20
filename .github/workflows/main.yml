@@ -32,14 +32,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api graphql --paginate -f query='
+          gh api graphql --paginate --jq '.[].title' -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
                 issues(first: 100, states:OPEN, after:$endCursor) {
-                  nodes { 
-                    number
-                    title
-                  }
+                  nodes { title }
                   pageInfo {
                     hasNextPage
                     endCursor
