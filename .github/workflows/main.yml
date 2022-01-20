@@ -42,9 +42,19 @@ jobs:
                     endCursor
                   }
                 }
+                issues(first:100, states:OPEN, after:$endCursor) {
+                  nodes {
+                    number
+                    title
+                  }
+                  pageInfo {
+                    hasNextPage
+                    endCursor
+                  }
+                }
               }
             }
-          '
+          ' > test.json
 #          gh api graphql --paginate --jq '.data.repository.issues.nodes[].title' -f query='
 #            query($endCursor: String) {
 #              repository(name: "game-compatibility", owner: "xenia-project") {
@@ -58,8 +68,8 @@ jobs:
 #              }
 #            }
 #          '
-      #- uses: actions/upload-artifact@v2
-      #  with:
-      #    name: test
-      #    path: test.json
-      #    if-no-files-found: error
+      - uses: actions/upload-artifact@v2
+        with:
+          name: test
+          path: test.json
+          if-no-files-found: error
