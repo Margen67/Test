@@ -38,12 +38,13 @@ jobs:
                 issues(first: 100, states:OPEN, after:$endCursor) {
                   nodes { title }
                   pageInfo {
+                    hasNextPage
                     endCursor
                   }
                 }
               }
             }
-          ' #> test.json
+          '
       #- uses: actions/upload-artifact@v2
       #  with:
       #    name: test
