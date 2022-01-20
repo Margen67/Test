@@ -35,18 +35,18 @@ jobs:
           gh api graphql --paginate --jq '.data.repository.issues.nodes[].title' -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
-                labels(first:100, after:$endCursor) {
-                  nodes { name }
-                  pageInfo {
-                    hasNextPage
-                    endCursor
-                  }
-                }
                 issues(first:100, states:OPEN, after:$endCursor) {
                   nodes {
                     number
                     title
                   }
+                  pageInfo {
+                    hasNextPage
+                    endCursor
+                  }
+                }
+                labels(first:100, after:$endCursor) {
+                  nodes { name }
                   pageInfo {
                     hasNextPage
                     endCursor
