@@ -35,7 +35,7 @@ jobs:
           gh api graphql --paginate -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
-                issues(first: 100, states:CLOSED, after:$endCursor) {
+                issues(first: 100, states:OPEN, after:$endCursor) {
                   nodes { 
                     number
                     title
