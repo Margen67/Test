@@ -37,10 +37,6 @@ jobs:
               repository(name: "game-compatibility", owner: "xenia-project") {
                 issues(first: 100, states:OPEN, after:$endCursor) {
                   nodes { title }
-                  pageInfo {
-                    hasNextPage
-                    endCursor
-                  }
                 }
               }
             }
