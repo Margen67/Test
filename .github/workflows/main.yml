@@ -31,20 +31,10 @@ jobs:
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: | # --jq '.data.repository.issues.nodes[].title'  --jq '.data.repository.labels.nodes[].name'
-          gh api graphql --paginate --jq '.data.repository.issues.nodes[].title' -f query='
+        run: |
+          gh api graphql --paginate --jq '.data.repository.labels.nodes[].name' -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
-                issues(first:100, states:OPEN, after:$endCursor) {
-                  nodes {
-                    number
-                    title
-                  }
-                  pageInfo {
-                    hasNextPage
-                    endCursor
-                  }
-                }
                 labels(first:100, after:$endCursor) {
                   nodes { name }
                   pageInfo {
@@ -54,7 +44,7 @@ jobs:
                 }
               }
             }
-          ' > test_dual.json
+          ' > labels.json
           gh api graphql --paginate --jq '.data.repository.issues.nodes[].title' -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
@@ -67,7 +57,7 @@ jobs:
                 }
               }
             }
-          ' > test.json
+          ' > issues.json
       - uses: actions/upload-artifact@v2
         with:
           name: test
