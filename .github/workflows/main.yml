@@ -58,8 +58,8 @@ jobs:
               }
             }
           ')
-          echo $memes1
-          echo $memes2
+          echo "$memes1"
+          echo "$memes2"
       - uses: actions/upload-artifact@v2
         with:
           name: test
