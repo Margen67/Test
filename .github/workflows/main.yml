@@ -8,7 +8,7 @@ on:
       - '*.yml'
   workflow_dispatch:
   issues:
-    types: [opened, edited]
+    #types: [opened, edited]
 
 #defaults:
 #  run:
@@ -31,43 +31,7 @@ jobs:
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          readarray -t labels < <(gh api graphql --paginate --jq '.data.repository.labels.nodes[].name' -f query='
-            query($endCursor: String) {
-              repository(name: "game-compatibility", owner: "xenia-project") {
-                labels(first:100, after:$endCursor) {
-                  nodes { name }
-                  pageInfo {
-                    hasNextPage
-                    endCursor
-                  }
-                }
-              }
-            }
-          ') #--jq '.data.repository.issues.nodes[].title'
-          issues_json=$(gh api graphql --jq '.data.repository[]' --paginate -f query='
-            query($endCursor: String) {
-              repository(name: "game-compatibility", owner: "xenia-project") {
-                issues(first:100, states:OPEN, after:$endCursor) {
-                  nodes {
-                    title
-                    number
-                  }
-                  pageInfo {
-                    hasNextPage
-                    endCursor
-                  }
-                }
-              }
-            }
-          ')
-          readarray -t issue_numbers < <(jq -r '.nodes[].number' <<<"$issues_json")
-          readarray -t issue_titles < <(jq -r '.nodes[].title' <<<"$issues_json")
-          echo "${issue_numbers[@]}"
-          echo "${issue_titles[@]}"
-          for (( i = 0; i <= $(expr ${#issue_numbers[@]} - 1); i++ )); do 
-            echo "${issue_numbers[$i]}": "${issue_titles[$i]}"
-          done
+        run: echo ${{ github.event.issue.labels }}
       #- uses: actions/upload-artifact@v2
       #  with:
       #    name: test
