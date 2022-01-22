@@ -32,7 +32,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          readarray -t arr1 < <(gh api graphql --paginate --jq '.data.repository.labels.nodes[].name' -f query='
+          readarray -t labels < <(gh api graphql --paginate --jq '.data.repository.labels.nodes[].name' -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
                 labels(first:100, after:$endCursor) {
@@ -44,12 +44,15 @@ jobs:
                 }
               }
             }
-          ')
-          readarray -t arr2 < <(gh api graphql --paginate --jq '.data.repository.issues.nodes[].title' -f query='
+          ') #--jq '.data.repository.issues.nodes[].title'
+          gh api graphql --paginate -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
                 issues(first:100, states:OPEN, after:$endCursor) {
-                  nodes { title }
+                  nodes {
+                    title
+                    number
+                  }
                   pageInfo {
                     hasNextPage
                     endCursor
@@ -57,11 +60,11 @@ jobs:
                 }
               }
             }
-          ')
-          echo "$arr1"
-          echo "$arr2"
+          ' > issues.json
       - uses: actions/upload-artifact@v2
         with:
           name: test
-          path: '*.json'
-          if-no-files-found: error
+          path: |
+            '*.json'
+#            '*.txt'
+#          if-no-files-found: error
