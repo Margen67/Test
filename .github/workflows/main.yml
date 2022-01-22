@@ -31,7 +31,7 @@ jobs:
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          labels: ${{ github.event.issue.labels }}
+          #labels: ${{ github.event.issue.labels }}
         run: echo ${{ github.event.issue.labels }}
       #- uses: actions/upload-artifact@v2
       #  with:
