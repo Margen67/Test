@@ -65,7 +65,7 @@ jobs:
           readarray -t issue_titles < <(jq -r '.nodes[].title' <<<"$issues_json")
           echo "${issue_numbers[@]}"
           echo "${issue_titles[@]}"
-          for (( i = 0; i <= ${#issue_numbers[@]}; i++ )); do 
+          for (( i = 0; i <= $(expr ${#issue_numbers[@]} - 1); i++ )); do 
             echo "${issue_numbers[$i]}": "${issue_titles[$i]}"
           done
       #- uses: actions/upload-artifact@v2
