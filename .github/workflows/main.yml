@@ -30,9 +30,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: test
-        #env:
-        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #  labels: ${{ github.event.issue.labels }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh issue view 6
       #- uses: actions/upload-artifact@v2
       #  with:
