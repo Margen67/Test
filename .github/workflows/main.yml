@@ -25,14 +25,16 @@ jobs:
     #    container: [ubuntu:devel, '']
     #    runs-on: [ubuntu-latest, windows-latest, macos-latest] #[windows-2016, windows-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-latest, macos-latest]
     env:
-      labels: ${{ github.event.issue.labels }}
+      labels: ${{ github.event.issue.labels.*.name }}
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - uses: actions/checkout@v2
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh issue view 6
+        run: |
+          echo "$labels"
+          gh issue view 6
       #- uses: actions/upload-artifact@v2
       #  with:
       #    name: test
