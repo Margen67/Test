@@ -7,8 +7,8 @@ on:
       - '.github/*_TEMPLATE/**'
       - '*.yml'
   workflow_dispatch:
-  #issues:
-  #  types: [opened, edited]
+  issues:
+    types: [opened, reopened] #edited
 
 #defaults:
 #  run:
