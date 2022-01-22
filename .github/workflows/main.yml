@@ -61,7 +61,7 @@ jobs:
               }
             }
           ')
-          readarray -t issue_numbers < <( jq -r '.nodes[].number' <<< "$issue_memes" )
+          readarray -t issue_numbers < <(<<<"$issue_memes" jq -r '.nodes[].number')
           echo "$issue_numbers"
       #- uses: actions/upload-artifact@v2
       #  with:
