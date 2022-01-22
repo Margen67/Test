@@ -45,7 +45,7 @@ jobs:
               }
             }
           ') #--jq '.data.repository.issues.nodes[].title'
-          gh api graphql --paginate -f query='
+          issues_json=$(gh api graphql --jq '.data.repository[]' --paginate -f query='
             query($endCursor: String) {
               repository(name: "game-compatibility", owner: "xenia-project") {
                 issues(first:100, states:OPEN, after:$endCursor) {
@@ -60,9 +60,11 @@ jobs:
                 }
               }
             }
-          ' > issues.json
-      - uses: actions/upload-artifact@v2
-        with:
-          name: test
-          path: '*.json'
-          if-no-files-found: error
+          ')
+          readarray -t issue_numbers < <( jq -r '.nodes[].number' <<< "$issue_memes" )
+          echo "$issue_numbers"
+      #- uses: actions/upload-artifact@v2
+      #  with:
+      #    name: test
+      #    path: '*.json'
+      #    if-no-files-found: error
