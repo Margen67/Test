@@ -13,7 +13,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      labels: ${{ github.event.issue.labels }}
+      labels: "${{ github.event.issue.labels }}"
     steps:
       - name: test
         run: echo "$labels"
