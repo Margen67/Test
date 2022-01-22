@@ -61,8 +61,10 @@ jobs:
               }
             }
           ')
-          readarray -t issue_numbers < <( jq -r '.nodes[].number' <<<"$issues_json")
+          readarray -t issue_numbers < <(jq -r '.nodes[].number' <<<"$issues_json")
+          readarray -t issue_titles < <(jq -r '.nodes[].title' <<<"$issues_json")
           echo "$issue_numbers"
+          echo "$issue_titles"
       #- uses: actions/upload-artifact@v2
       #  with:
       #    name: test
