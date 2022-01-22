@@ -64,7 +64,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: test
-          path: |
-            '*.json'
-#            '*.txt'
-#          if-no-files-found: error
+          path: '*.json'
+          if-no-files-found: error
