@@ -66,7 +66,7 @@ jobs:
           echo "${issue_numbers[@]}"
           echo "${issue_titles[@]}"
           for (( i = 0; i <= "${#issue_numbers[@]}"; i++ )); do 
-            echo "${issue_numbers[$i]} - "${issue_titles[$i]}"
+            echo "${issue_numbers[$i]}": "${issue_titles[$i]}"
           done
       #- uses: actions/upload-artifact@v2
       #  with:
