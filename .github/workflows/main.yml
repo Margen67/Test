@@ -1,11 +1,11 @@
 name: Test
 
 on:
-#  push:
-#    paths-ignore:
-#      - '.github/*'
-#      - '.github/*_TEMPLATE/**'
-#      - '*.yml'
+  push:
+    paths-ignore:
+      - '.github/*'
+      - '.github/*_TEMPLATE/**'
+      - '*.yml'
   workflow_dispatch:
   issues:
     types: [opened, reopened] #edited
