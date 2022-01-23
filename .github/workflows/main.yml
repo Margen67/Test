@@ -32,4 +32,4 @@ jobs:
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh issue edit 6 --add-labels BUG
+        run: gh issue edit 6 --add-label BUG
