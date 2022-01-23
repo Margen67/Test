@@ -7,8 +7,8 @@ on:
       - '.github/*_TEMPLATE/**'
       - '*.yml'
   workflow_dispatch:
-  issues:
-    types: [opened, reopened] #edited
+  #issues:
+  #  types: [opened, reopened] #edited
 
 #defaults:
 #  run:
@@ -24,17 +24,20 @@ jobs:
     #  matrix:
     #    container: [ubuntu:devel, '']
     #    runs-on: [ubuntu-latest, windows-latest, macos-latest] #[windows-latest, ubuntu-18.04, ubuntu-latest, macos-latest]
-    env:
-      labels: ${{ join(github.event.issue.labels.*.name) }}
+    #env:
+    #  labels: ${{ join(github.event.issue.labels.*.name) }}
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - uses: actions/checkout@v2
+      #- uses: actions/checkout@v2
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "$labels"
-          gh issue view 6
+          labels_to_add='state- state-'
+          state_label_count=$(echo "$labels_to_add" | grep -o 'state-' | wc -l)
+          if (( $state_label_count > 1)); then
+            echo hi
+          fi
       #- uses: actions/upload-artifact@v2
       #  with:
       #    name: test
