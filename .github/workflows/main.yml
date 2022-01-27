@@ -29,9 +29,7 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       #- uses: actions/checkout@v2
-      - name: printf
+      - name: test
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: printf '${{ github.event.issue.body }}'
-      - name: echo
-        run: echo '${{ github.event.issue.body }}'
+        run: dotnet
