@@ -32,4 +32,4 @@ jobs:
       - name: test
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: dotnet
+        run: msbuild
