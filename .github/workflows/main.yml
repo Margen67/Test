@@ -33,4 +33,4 @@ jobs:
         env:
           issue_body: ${{ github.event.issue.body }}
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo "${{ github.event.issue.body }}"
+        run: printf "${{ github.event.issue.body }}"
