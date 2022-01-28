@@ -30,6 +30,9 @@ jobs:
       issue_comment_author: ${{ github.event.comment.author.username }}
       issue_comment_creator: ${{ github.event.comment.creator.username }}
       issue_comment_editor: ${{ github.event.comment.editor.username }}
+      issue_comment_author2: ${{ github.event.comment.user.login }}
+      issue_comment_creator2: ${{ github.event.comment.user.login }}
+      issue_comment_editor2: ${{ github.event.comment.user.login }}
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       #- uses: actions/checkout@v2
