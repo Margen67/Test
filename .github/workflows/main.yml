@@ -29,6 +29,7 @@ jobs:
     env:
       issue_comment_author: ${{ github.event.comment.author }}
       issue_comment_creator: ${{ github.event.comment.creator }}
+      issue_comment_editor: ${{ github.event.comment.editor }}
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       #- uses: actions/checkout@v2
