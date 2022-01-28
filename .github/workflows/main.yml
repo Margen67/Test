@@ -8,7 +8,7 @@ on:
   #    - '*.yml'
   #workflow_dispatch:
   issues:
-    types: [opened, reopened, edited]
+    #types: [opened, reopened, edited]
   issue_comment:
     types: [created, edited]
   pull_request:
