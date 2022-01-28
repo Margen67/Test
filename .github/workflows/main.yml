@@ -34,4 +34,4 @@ jobs:
       - name: test
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo "${{ github.event.issue_comment.actor }} ${{ github.event.issue_comment.editor }} ${{ github.event.issue_comment.url }}"
+        run: echo "${{ github.event.issue_comment.*.actor }} ${{ github.event.issue_comment.*.editor }} ${{ github.event.issue_comment.*.url }}"
