@@ -1,12 +1,12 @@
 name: Test
 
 on:
-  push:
-    paths-ignore:
-      - '.github/*'
-      - '.github/*_TEMPLATE/**'
-      - '*.yml'
-  workflow_dispatch:
+  #push:
+  #  paths-ignore:
+  #    - '.github/*'
+  #    - '.github/*_TEMPLATE/**'
+  #    - '*.yml'
+  #workflow_dispatch:
   #issues:
   #  types: [opened, reopened] #edited
   issue_comment:
@@ -27,7 +27,7 @@ jobs:
     #    container: [ubuntu:devel, '']
     #    runs-on: [ubuntu-latest, windows-latest, macos-latest] #[windows-latest, ubuntu-18.04, ubuntu-latest, macos-latest]
     env:
-      issue_comment_body: ${{ github.event.issue_comment.body }}
+      issue_comment_body: ${{ github.event.issue.issue_comment.body }}
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       #- uses: actions/checkout@v2
