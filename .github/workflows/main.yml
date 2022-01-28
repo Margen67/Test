@@ -27,7 +27,7 @@ jobs:
     #    container: [ubuntu:devel, '']
     #    runs-on: [ubuntu-latest, windows-latest, macos-latest] #[windows-latest, ubuntu-18.04, ubuntu-latest, macos-latest]
     env:
-      issue_comment_body: ${{ github.event.issue_comment.comment.body }}
+      issue_comment_body: ${{ github.event.comment.body }}
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       #- uses: actions/checkout@v2
