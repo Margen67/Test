@@ -7,8 +7,8 @@ on:
   #    - '.github/*_TEMPLATE/**'
   #    - '*.yml'
   #workflow_dispatch:
-  #issues:
-  #  types: [opened, reopened] #edited
+  issues:
+    types: [opened, reopened, edited]
   issue_comment:
     types: [created, edited]
 
@@ -26,12 +26,12 @@ jobs:
     #  matrix:
     #    container: [ubuntu:devel, '']
     #    runs-on: [ubuntu-latest, windows-latest, macos-latest] #[windows-latest, ubuntu-18.04, ubuntu-latest, macos-latest]
-    env:
-      issue_comment_body: ${{ github.event.comment.body }}
+    #env:
+    #  issue_comment_body: ${{ github.event.comment.body }}
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       #- uses: actions/checkout@v2
       - name: test
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo "$issue_comment_body"
+        run: echo "$GITHUB_EVENT_NAME"
