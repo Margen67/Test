@@ -39,7 +39,7 @@ jobs:
         run: |
           gh api graphql --jq '.data.repository[]' --paginate -f query='
           query($endCursor: String) {
-            repository(name: "game-compatibility", owner: "xenia-project") {
+            repository(owner: "xenia-project", name: "game-compatibility") {
               issues(first:100, states:OPEN, after:$endCursor) {
                 nodes {
                   number
