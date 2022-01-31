@@ -6,7 +6,7 @@ on:
   #    - '.github/*'
   #    - '.github/*_TEMPLATE/**'
   #    - '*.yml'
-  #workflow_dispatch:
+  workflow_dispatch:
   #issues:
   #  types: [opened, reopened, edited]
   #issue_comment:
