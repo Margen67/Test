@@ -40,12 +40,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #env:
+        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo test > txt.txt
-          git config --global user.email "nice@me.me"
-          git config --global user.name "github-actions"
-          git add -A
-          git commit -am "test"
-          git push
+          memes='2'
+          if (( $memes = 2 )); then
+            echo hi
+          fi
