@@ -1,12 +1,17 @@
 name: Test
 
 on:
-  #push:
+  issues:
+    types: [opened, edited]
+  issue_comment: created #, edited]
+  pull_request:   # Yes, someone actually did this;
+    types: opened # https://github.com/xenia-project/game-compatibility/pull/1501
+  push:
   #  paths-ignore:
   #    - '.github/*'
   #    - '.github/*_TEMPLATE/**'
   #    - '*.yml'
-  workflow_dispatch:
+  #workflow_dispatch:
   #issues:
   #  types: [opened, reopened, edited]
   #issue_comment:
