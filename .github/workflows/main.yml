@@ -40,8 +40,5 @@ jobs:
           echo test > txt.txt
           git add -A
           git commit -am "test"
-      - uses: actions/upload-artifact@v2
-        with:
-          name: test
-          path: '*.json'
-          if-no-files-found: error
+          git config --global user.email "nice@me.me"
+          git config --global user.name "github-actions"
