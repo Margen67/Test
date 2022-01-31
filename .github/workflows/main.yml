@@ -42,3 +42,4 @@ jobs:
           git config --global user.name "github-actions"
           git add -A
           git commit -am "test"
+          git push
