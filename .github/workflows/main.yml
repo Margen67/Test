@@ -37,22 +37,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api graphql --jq '.data.repository[]' --paginate -f query='
-          query($endCursor: String) {
-            repository(owner: "xenia-project", name: "game-compatibility") {
-              issues(first:100, states:OPEN, after:$endCursor) {
-                nodes {
-                  number
-                  title
-                  body
-                }
-                pageInfo {
-                  hasNextPage
-                  endCursor
-                }
-              }
-            }
-          }' > test.json
+          echo test > txt.txt
+          git add -A
+          git commit -am "test"
       - uses: actions/upload-artifact@v2
         with:
           name: test
