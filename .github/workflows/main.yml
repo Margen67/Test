@@ -3,7 +3,8 @@ name: Test
 on:
   issues:
     types: [opened, edited]
-  issue_comment: created #, edited]
+  issue_comment:
+    types: created #, edited]
   pull_request:
     types: opened
   push:
