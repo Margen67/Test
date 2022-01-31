@@ -38,7 +38,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo test > txt.txt
-          git add -A
-          git commit -am "test"
           git config --global user.email "nice@me.me"
           git config --global user.name "github-actions"
+          git add -A
+          git commit -am "test"
