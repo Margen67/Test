@@ -43,7 +43,7 @@ jobs:
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          memes='2'
-          if (( $memes = 2 )); then
+          export memes='2'
+          if (( "$memes"=2 )); then
             echo hi
           fi
