@@ -4,8 +4,8 @@ on:
   issues:
     types: [opened, edited]
   issue_comment: created #, edited]
-  pull_request:   # Yes, someone actually did this;
-    types: opened # https://github.com/xenia-project/game-compatibility/pull/1501
+  pull_request:
+    types: opened
   push:
   #  paths-ignore:
   #    - '.github/*'
