@@ -42,8 +42,4 @@ jobs:
       - name: test
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          export memes='2'
-          if (( "$memes"=2 )); then
-            echo hi
-          fi
+        run: git config --global user.email "actions@github.com" user.name "github-actions"
