@@ -55,8 +55,8 @@ Most branches serve a specific purpose. For example, <code>canary_pr</code> only
 | qt-settings-impl
 | TODO.
 |-
-| canary-FFmpeg
-| TODO.
+| <s>canary-FFmpeg</s>
+|
 |-
 | qt-updated
 | TODO.
