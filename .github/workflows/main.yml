@@ -38,8 +38,12 @@ jobs:
     #  issue_title: ${{ github.event.issue.title }}
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - uses: actions/checkout@v2
+      #- uses: actions/checkout@v2
       - name: test
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: git config --global user.email "actions@github.com" user.name "github-actions"
+        run: |
+          curl -fLJO https://github.com/xenia-canary/game-patches/archive/refs/heads/main.zip
+          7z e main.zip patches
+          ls
+          ls patches -recurse
