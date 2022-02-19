@@ -40,8 +40,8 @@ jobs:
     steps:
       #- uses: actions/checkout@v2
       - name: test
-        #env:
-        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           #curl -fLJO https://github.com/xenia-canary/game-patches/archive/refs/heads/main.zip
           #7z l game-patches-main.zip
