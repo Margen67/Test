@@ -48,4 +48,4 @@ jobs:
           #7z e game-patches-main.zip game-patches-main/patches -opatches
           #7z x game-patches-main.zip game-patches-main/patches
           #ls -a
-          gh release delete a -y
+          gh release delete master -y
