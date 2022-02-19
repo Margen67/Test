@@ -44,6 +44,6 @@ jobs:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           curl -fLJO https://github.com/xenia-canary/game-patches/archive/refs/heads/main.zip
-          7z l game-patches-main.zip
-          #7z e game-patches-main.zip patches -opatches
-          #ls -a
+          #7z l game-patches-main.zip
+          7z e game-patches-main.zip game-patches-main/patches -opatches
+          ls -a
