@@ -46,4 +46,4 @@ jobs:
           curl -fLJO https://github.com/xenia-canary/game-patches/archive/refs/heads/main.zip
           7z e game-patches-main.zip patches
           ls
-          ls patches -recurse
+          ls patches
