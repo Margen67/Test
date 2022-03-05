@@ -43,10 +43,4 @@ jobs:
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          $tag=${env:GITHUB_SHA}.SubString(0,7)
-          $branch=$($env:GITHUB_REF -replace 'refs/heads/', '')
-          echo "branch = $branch"
-          $branch="canary_$branch"
-          # Remove canary_ to prevent conflicts from tag
-          $tag=$($env:branch -replace 'canary_', '')
-          echo "tag = $tag"
+          gh release delete a b
