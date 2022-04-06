@@ -41,6 +41,7 @@ jobs:
     steps:
       #- uses: actions/checkout@v3
       - name: test
-        #env:
+        env:
+          test: ${{ matrix.compiler-version[0] }}
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo "1 = ${{ matrix.test[0] }}"
+        run: echo "1 = $test"
