@@ -44,4 +44,4 @@ jobs:
         env:
           test: ${{ matrix.test[0] }}
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo "1 = $test"
+        run: echo '${{ matrix.test }}'
