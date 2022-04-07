@@ -40,8 +40,11 @@ jobs:
     #  POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       #- uses: actions/checkout@v3
+      - uses: KyleMayes/install-llvm-action@v1
+        with:
+          version: '10.0'
       - name: test
-        env:
-          test: ${{ matrix.test[0] }}
+        #env:
+        #  test: ${{ matrix.test[0] }}
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo '${{ matrix.test }}'
+        run: clang --version
