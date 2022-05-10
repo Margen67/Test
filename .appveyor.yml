@@ -1,1 +1,18 @@
+version: '{build}-{branch}'
 
+only_commits:
+  files:
+    - .appveyor.yml
+
+image: Visual Studio 2005
+
+clone_depth: 1
+
+environment:
+  POWERSHELL_TELEMETRY_OPTOUT: 1
+#  HOMEBREW_NO_ANALYTICS: 1
+
+build_script:
+  - ps: echo hi
+
+test: off
