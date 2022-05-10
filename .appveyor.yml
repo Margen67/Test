@@ -4,7 +4,7 @@ only_commits:
   files:
     - .appveyor.yml
 
-image: Visual Studio 2005
+image: Visual Studio 2008
 
 clone_depth: 1
 
