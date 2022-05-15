@@ -48,8 +48,6 @@ jobs:
         #  test: ${{ matrix.test[0] }}
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo ${{ matrix.test[0] }}
-          echo ${{ matrix.test.0 }}
-#          echo ${{ matrix.test.(0) }}
+          echo ${{ matrix.test.(0) }}
 #          echo ${{ matrix.test(0) }}
 #          echo ${{ matrix.test{0} }}
