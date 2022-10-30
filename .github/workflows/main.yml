@@ -49,4 +49,4 @@ jobs:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           get-childitem C:\msys64\mingw64\bin
-          get-childitem C:\msys64\usr\bin
+      - run: get-childitem C:\msys64\usr\bin
