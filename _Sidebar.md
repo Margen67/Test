@@ -3,6 +3,6 @@
 
   * [[FAQ]]
   * [PR Status](../projects/1)
-  * [[Profiles]]
+  * ~~[[Profiles]]~~
   * [[Options]]
   * [Game Patches](https://github.com/xenia-canary/game-patches)
