@@ -44,7 +44,7 @@ jobs:
 #          repository: ${{ github.repository }}.wiki
       - uses: microsoft/setup-msbuild@v1.3.1
       - shell: bash
-        run: msbuild
+        run: msbuild.exe
 #      - name: test
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
