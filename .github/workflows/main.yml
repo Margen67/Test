@@ -43,7 +43,7 @@ jobs:
 #        with:
 #          repository: ${{ github.repository }}.wiki
 #      - shell: bash
-       - run: echo $(sysctl -n hw.availcpu)
+       - run: vcpkg
 #      - name: test
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
