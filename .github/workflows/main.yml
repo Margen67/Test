@@ -44,7 +44,7 @@ jobs:
 #          repository: ${{ github.repository }}.wiki
 #      - shell: bash
        - name: test
-         run:
+         run: |
            sudo apt-get -y upgrade
            sudo apt-get -y install mingw-w64
        - run: x86_64-w64-mingw32-g++ 
