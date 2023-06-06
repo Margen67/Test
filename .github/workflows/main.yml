@@ -39,11 +39,11 @@ jobs:
 #      issue_title: ${{ github.event.issue.title }}
 #      POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-#      - uses: actions/checkout@v3
-#        with:
-#          repository: ${{ github.repository }}.wiki
-#      - shell: bash
-       - run: ls "$env:VCPKG_INSTALLATION_ROOT"
+      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          repository: ${{ github.repository }}.wiki
+      - run: pwd && ls
 #      - name: test
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
