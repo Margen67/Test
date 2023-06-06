@@ -39,11 +39,18 @@ jobs:
 #      issue_title: ${{ github.event.issue.title }}
 #      POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
+      - run: |
+          echo "GITHUB_WORKSPACE = $env:GITHUB_WORKSPACE"
+          pwd
+          ls
       - uses: actions/checkout@v3
       - uses: actions/checkout@v3
         with:
           repository: ${{ github.repository }}.wiki
-      - run: pwd && ls
+      - run: |
+          pwd
+          ls
+          echo "GITHUB_WORKSPACE = $env:GITHUB_WORKSPACE"
 #      - name: test
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
