@@ -51,6 +51,7 @@ jobs:
           pwd
           ls
           echo "GITHUB_WORKSPACE = $env:GITHUB_WORKSPACE"
+          git remote -v
 #      - name: test
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
