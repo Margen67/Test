@@ -8,10 +8,11 @@ on:
 #  pull_request:
 #    types: opened
   push:
-    paths-ignore:
-      - '.github/*'
-      - '.github/*_TEMPLATE/**'
-      - '*.yml'
+    branches: wiki
+#    paths-ignore:
+#      - '.github/*'
+#      - '.github/*_TEMPLATE/**'
+#      - '*.yml'
 #  workflow_dispatch:
 #  issues:
 #    types: [opened, reopened, edited]
