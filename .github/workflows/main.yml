@@ -50,7 +50,7 @@ jobs:
           git pull
           #git remote -v
           #git branch -a
-          git reset --hard bc2f3b5f922f31e552374e2753038b3811da21de
+          git reset --hard origin/bc2f3b5f922f31e552374e2753038b3811da21de
           #git reset --hard origin/wiki
           git push -f
 #      - name: test
