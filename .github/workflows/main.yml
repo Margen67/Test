@@ -48,8 +48,8 @@ jobs:
         run: |
           git remote add remote https://github.com/${{ github.repository }}.git
           git pull
-          #git remote -v
-          #git branch -a
+          git remote -v
+          git branch -a
           git reset --hard origin/wiki
           git push -f
 #      - name: test
