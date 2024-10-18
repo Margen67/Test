@@ -39,7 +39,9 @@ jobs:
 #      pull_request_title: ${{ github.event.pull_request.title }}
 #      issue_title: ${{ github.event.issue.title }}
 #      POWERSHELL_TELEMETRY_OPTOUT: 1
-#    steps:
+    steps:
+      - name: run
+        run: printf "${{ github.ref }}"
 #      - uses: actions/checkout@v4
 #        with:
 #          repository: ${{ github.repository }}.wiki
