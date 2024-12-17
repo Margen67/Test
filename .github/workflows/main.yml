@@ -42,7 +42,7 @@ jobs:
     steps:
       - name: run
         run: printf "${{ github.ref }}"
-#      - uses: actions/checkout@v4
+#      - uses: actions/checkout@main
 #        with:
 #          repository: ${{ github.repository }}.wiki
 #      - name: Update wiki
