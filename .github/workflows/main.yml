@@ -41,7 +41,7 @@ jobs:
 #      POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
       - name: run
-        run: printf "${{ github.ref }}"
+        run: type -a clang-format
 #      - uses: actions/checkout@main
 #        with:
 #          repository: ${{ github.repository }}.wiki
