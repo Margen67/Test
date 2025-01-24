@@ -46,7 +46,7 @@ jobs:
 #          repository: Margen67/Cxbx-Reloaded
       - name: run
         env:
-          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: Margen67/Cxbx-Reloaded
         run: gh release create tag -t title
 #      - name: Update wiki
