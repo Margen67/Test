@@ -41,9 +41,9 @@ jobs:
 #      POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
 #      - uses: actions/checkout@main
-#      - uses: actions/checkout@main
-#        with:
-#          repository: Margen67/Cxbx-Reloaded
+      - uses: actions/checkout@main
+        with:
+          repository: Margen67/Cxbx-Reloaded
       - name: run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
