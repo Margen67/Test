@@ -47,7 +47,7 @@ jobs:
       - name: run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create -R Margen67/Test tag -t title
+        run: gh release create tag -t title
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
