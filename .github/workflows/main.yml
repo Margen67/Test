@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@main
       - uses: actions/checkout@main
         with:
-          repository: ${{ github.repository }}.wiki
+          repository: Margen67/Cxbx-Reloaded
       - name: run
         run: pwd && ls
 #      - name: Update wiki
