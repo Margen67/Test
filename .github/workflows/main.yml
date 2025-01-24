@@ -40,12 +40,14 @@ jobs:
 #      issue_title: ${{ github.event.issue.title }}
 #      POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - uses: actions/checkout@main
-      - uses: actions/checkout@main
-        with:
-          repository: Margen67/Cxbx-Reloaded
+#      - uses: actions/checkout@main
+#      - uses: actions/checkout@main
+#        with:
+#          repository: Margen67/Cxbx-Reloaded
       - name: run
-        run: pwd && ls
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create -R Margen67/Test tag -t title
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
