@@ -44,7 +44,12 @@ jobs:
       - name: run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release view tag
+        run: |
+          if [ gh release view tag ]; then
+            echo '0'
+          else
+            echo '1'
+          fi
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
