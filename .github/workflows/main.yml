@@ -45,7 +45,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ gh release view tag ]; then
+          if gh release view tag; then
             echo '0'
           else
             echo '1'
