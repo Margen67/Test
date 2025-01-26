@@ -40,7 +40,7 @@ jobs:
 #      issue_title: ${{ github.event.issue.title }}
 #      POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      - uses: actions/checkout@main
+      #- uses: actions/checkout@main
       - name: run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
