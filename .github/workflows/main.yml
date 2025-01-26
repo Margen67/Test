@@ -45,11 +45,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if gh release view tag; then
-            echo '0'
-          else
-            echo '1'
-          fi
+          echo ${{ github.event.head_commit.message }}
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
