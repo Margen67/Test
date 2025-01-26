@@ -40,12 +40,17 @@ jobs:
 #      issue_title: ${{ github.event.issue.title }}
 #      POWERSHELL_TELEMETRY_OPTOUT: 1
     steps:
-      #- uses: actions/checkout@main
+      - uses: actions/checkout@main
       - name: run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "${{ github.event.head_commit.message }}"
+          tar --strip-components 1 -cvpf test.tar .github/workflows/main.yml
+      - uses: actions/upload-artifact@main
+        with:
+          name: artifact
+          path: test.tar
+          if-no-files-found: error
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
