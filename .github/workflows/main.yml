@@ -46,11 +46,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
          echo "TEST = $TEST"
-      - uses: actions/upload-artifact@main
-        with:
-          name: artifact
-          path: test.tar
-          if-no-files-found: error
+#      - uses: actions/upload-artifact@main
+#        with:
+#          name: artifact
+#          path: test.tar
+#          if-no-files-found: error
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
