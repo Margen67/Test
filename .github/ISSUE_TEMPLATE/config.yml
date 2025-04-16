@@ -1,8 +1,4 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Xenia Canary compatibility repository
-    url: https://github.com/xenia-canary/game-compatibility
-    about: Compatibility reports for Xenia Canary belong here.
-  - name: Xenia Discord server
-    url: https://discord.gg/Q9mxZf9
-    about: Tech support for Xenia belongs here.
+  - name: README
+    url: https://github.com/xenia-project/game-compatibility/blob/master/README.md
