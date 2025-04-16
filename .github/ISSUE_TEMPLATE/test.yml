@@ -1,0 +1,15 @@
+name: See above.
+description: Template for game compatibility reports.
+body:
+  - id: disclaimer
+    type: markdown
+    attributes:
+      value: |
+        See the README: https://github.com/xenia-project/game-compatibility/blob/master/README.md
+  - id: validation
+    type: checkboxes
+    attributes:
+      label: Validation
+      options:
+        - label: I can't read.
+          required: true
