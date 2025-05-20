@@ -35,17 +35,17 @@ jobs:
 #        test: [a, b]
 #        container: [ubuntu:devel, '']
 #        runs-on: [ubuntu-latest, windows-latest, macos-latest] #[windows-latest, ubuntu-18.04, ubuntu-latest, macos-latest]
-    env:
+#    env:
 #      pull_request_title: ${{ github.event.pull_request.title }}
 #      issue_title: ${{ github.event.issue.title }}
-      TEST: true
+#      TEST: true
     steps:
       #- uses: actions/checkout@main
       - name: run
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ #       env:
+ #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-         echo "TEST = $TEST"
+         protobuild
 #      - uses: actions/upload-artifact@main
 #        with:
 #          name: artifact
