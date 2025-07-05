@@ -48,8 +48,8 @@ jobs:
          echo "${{ matrix.test }}"
          echo "${{ matrix.test.0 }}"
          echo "${{ matrix.test.1 }}"
-         echo "${{ matrix.test.[0] }}"
-         echo "${{ matrix.test.[1] }}"
+##         echo "${{ matrix.test.[0] }}"
+##         echo "${{ matrix.test.[1] }}"
 #      - uses: actions/upload-artifact@main
 #        with:
 #          name: artifact
