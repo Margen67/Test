@@ -72,5 +72,5 @@ jobs:
     steps:
       - uses: actions/download-artifact@main
         with:
-          pattern: '!**.md'
+          pattern: '!*.md'
       - run: ls -Ra
