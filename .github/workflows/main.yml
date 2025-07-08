@@ -45,12 +45,13 @@ jobs:
  #       env:
  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-         clang++ --version
-#      - uses: actions/upload-artifact@main
-#        with:
-#          name: artifact
-#          path: test.tar
-#          if-no-files-found: error
+         echo hi > test.txt
+         echo hello > test.md
+      - uses: actions/upload-artifact@main
+        with:
+          name: artifact
+          path: test*
+          if-no-files-found: error
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -65,3 +66,11 @@ jobs:
 #          test: ${{ matrix.test[0] }}
 #        run: |
 #          echo hi
+  test2:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@main
+        with:
+          pattern: '!*.pdb'
+      - run: ls -a
