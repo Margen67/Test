@@ -44,6 +44,7 @@ jobs:
       - name: run
  #       env:
  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
         run: |
          find / -name "clang-format*.exe"
 #      - name: Update wiki
