@@ -46,7 +46,7 @@ jobs:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        shell: bash
         run: |
-         get-command -all bash, sh, zsh, fsh
+         get-command -all bash, sh
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
