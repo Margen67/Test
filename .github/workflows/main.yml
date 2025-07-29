@@ -44,9 +44,12 @@ jobs:
       - name: run
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        shell: bash
+        shell: sh
         run: |
-         cmake --version
+         test = test
+         if [[ test = test ]]; then
+           echo hi
+         fi
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
