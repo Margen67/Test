@@ -46,7 +46,7 @@ jobs:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        shell: sh
         run: |
-         7z a test.zip -xr*.txt -mx9 -bb3
+         7z a test.zip -xr!'*.txt' -mx9 -bb3
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
