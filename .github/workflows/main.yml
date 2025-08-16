@@ -44,11 +44,12 @@ jobs:
         with:
           repository: xenia-canary/xenia-canary
       - name: run
-#        env:
+        env:
+          LC_ALL: C.UTF-8
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        shell: sh
         run: |
-          grep -oP '(?<=path = )(?!third_party\/(FidelityFX-(CAS|FSR))).+' .gitmodules
+          grep -oP '(?<=path = )(?!third_party\/FidelityFX-(CAS|FSR)).+' .gitmodules
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
