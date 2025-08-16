@@ -42,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
         with:
-          repository: xenia-canary
+          repository: xenia-canary/xenia-canary
       - name: run
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
