@@ -41,12 +41,14 @@ jobs:
 #      TEST: true
     steps:
       - uses: actions/checkout@main
+        with:
+          repository: xenia-canary
       - name: run
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        shell: sh
         run: |
-          grep
+          grep -oP '(?<=path = )(?!third_party\/(FidelityFX-(CAS|FSR))).+' .gitmodules
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
