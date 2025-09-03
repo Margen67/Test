@@ -7,7 +7,7 @@ on:
 #    types: created #, edited]
 #  pull_request:
 #    types: opened
-  push:
+##  push:
 #    branches: wiki
     paths-ignore:
       - '.github/*'
@@ -49,17 +49,18 @@ jobs:
           repository: xenia-canary/xenia-canary
       - name: run
         env:
-          I_AM_ZERO: ${{ inputs.I_AM_BOOLEAN }}
+          I_AM_BOOLEAN: ${{ inputs.I_AM_BOOLEAN }}
 #          LC_ALL: C.UTF-8
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: python
         run: |
           import os
 
-          if os.getenv("I_AM_BOOLEAN"):
-            print("I_AM_BOOLEAN: True")
+          I_AM_BOOLEAN=os.getenv("I_AM_BOOLEAN")
+          if I_AM_BOOLEAN:
+            print(f"I_AM_BOOLEAN: True ({I_AM_BOOLEAN})")
           else:
-            print("I_AM_BOOLEAN: False")
+            print(f"I_AM_BOOLEAN: False ({I_AM_BOOLEAN})")
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
