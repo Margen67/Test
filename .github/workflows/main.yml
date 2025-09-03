@@ -7,7 +7,7 @@ on:
 #    types: created #, edited]
 #  pull_request:
 #    types: opened
-##  push:
+  push:
 #    branches: wiki
     paths-ignore:
       - '.github/*'
