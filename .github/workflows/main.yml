@@ -15,9 +15,9 @@ on:
       - '*.yml'
   workflow_dispatch:
     inputs:
-      I_AM_BOOLEAN:
-        type: boolean
-        default: false
+      TEST:
+        #type: boolean
+        #default: false
 #  issues:
 #    types: [opened, reopened, edited]
 #  issue_comment:
