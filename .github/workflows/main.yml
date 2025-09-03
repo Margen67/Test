@@ -14,6 +14,10 @@ on:
       - '.github/*_TEMPLATE/**'
       - '*.yml'
   workflow_dispatch:
+    inputs:
+      I_AM_BOOLEAN:
+        type: boolean
+        default: false
 #  issues:
 #    types: [opened, reopened, edited]
 #  issue_comment:
@@ -45,11 +49,17 @@ jobs:
           repository: xenia-canary/xenia-canary
       - name: run
         env:
-          LC_ALL: C.UTF-8
+          I_AM_ZERO: ${{ inputs.I_AM_BOOLEAN }}
+#          LC_ALL: C.UTF-8
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        shell: sh
+        shell: python
         run: |
-          grep -oP '(?<=path = )(?!third_party\/FidelityFX-(CAS|FSR)).+' .gitmodules
+          import os
+
+          if os.getenv("I_AM_BOOLEAN"):
+            print("I_AM_BOOLEAN: True")
+          else:
+            print("I_AM_BOOLEAN: False")
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
