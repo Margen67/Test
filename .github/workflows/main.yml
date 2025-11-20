@@ -14,10 +14,10 @@ on:
       - '.github/*_TEMPLATE/**'
       - '*.yml'
   workflow_dispatch:
-    inputs:
-      TEST:
-        #type: boolean
-        #default: false
+#    inputs:
+#      TEST:
+#        type: boolean
+#        default: false
 #  issues:
 #    types: [opened, reopened, edited]
 #  issue_comment:
@@ -48,19 +48,13 @@ jobs:
         with:
           repository: xenia-canary/xenia-canary
       - name: run
-        env:
-          I_AM_BOOLEAN: ${{ inputs.I_AM_BOOLEAN }}
+#        env:
+#          I_AM_BOOLEAN: ${{ inputs.I_AM_BOOLEAN }}
 #          LC_ALL: C.UTF-8
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        shell: python
+#        shell: python
         run: |
-          import os
-
-          I_AM_BOOLEAN=os.getenv("I_AM_BOOLEAN")
-          if I_AM_BOOLEAN:
-            print(f"I_AM_BOOLEAN: True ({I_AM_BOOLEAN})")
-          else:
-            print(f"I_AM_BOOLEAN: False ({I_AM_BOOLEAN})")
+          python --version
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
