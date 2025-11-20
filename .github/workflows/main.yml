@@ -47,6 +47,9 @@ jobs:
       - uses: actions/checkout@main
         with:
           repository: xenia-canary/xenia-canary
+      - uses: actions/setup-python@main
+        with:
+          python-version: '3.x'
       - name: run
 #        env:
 #          I_AM_BOOLEAN: ${{ inputs.I_AM_BOOLEAN }}
