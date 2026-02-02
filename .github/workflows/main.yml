@@ -57,7 +57,7 @@ jobs:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        shell: python
         run: |
-          vswhere -version \"[17,)\" -latest -prerelease -format json -utf8 -products Microsoft.VisualStudio.Product.Enterprise Microsoft.VisualStudio.Product.Professional Microsoft.VisualStudio.Product.Community Microsoft.VisualStudio.Product.BuildTools
+          vswhere -version "[17,)" -latest -prerelease -format json -utf8 -products Microsoft.VisualStudio.Product.Enterprise Microsoft.VisualStudio.Product.Professional Microsoft.VisualStudio.Product.Community Microsoft.VisualStudio.Product.BuildTools
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
