@@ -44,23 +44,24 @@ jobs:
 #      issue_title: ${{ github.event.issue.title }}
 #      TEST: true
     steps:
-      - uses: actions/github-script@main
-        with:
-          script: |
-            console.log(context.eventName);
+#      - uses: actions/github-script@main
+#        with:
+#          script: |
+#            console.log(context.eventName);
 #      - uses: actions/checkout@main
 #        with:
 #          repository: xenia-canary/xenia-canary
 #      - uses: actions/setup-python@main
 #        with:
 #          python-version: '3.x'
-#      - name: run
+      - name: run
 #        env:
 #          I_AM_BOOLEAN: ${{ inputs.I_AM_BOOLEAN }}
 #          LC_ALL: C.UTF-8
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        shell: python
-#        run: |
+        run: |
+          echo $GITHUB_OUTPUT
 #          vswhere -version "[17,)" -latest -prerelease -format json -utf8 -products Microsoft.VisualStudio.Product.Enterprise Microsoft.VisualStudio.Product.Professional Microsoft.VisualStudio.Product.Community Microsoft.VisualStudio.Product.BuildTools
 #      - name: Update wiki
 #        env:
