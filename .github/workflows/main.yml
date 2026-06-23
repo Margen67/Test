@@ -44,10 +44,10 @@ jobs:
 #      issue_title: ${{ github.event.issue.title }}
 #      TEST: true
     steps:
-#      - uses: actions/github-script@main
-#        with:
-#          script: |
-#            console.log(context.eventName);
+      - uses: actions/github-script@main
+        with:
+          script: |-
+            console.log(context.eventName);
 #      - uses: actions/checkout@main
 #        with:
 #          repository: xenia-canary/xenia-canary
@@ -60,14 +60,14 @@ jobs:
 #          LC_ALL: C.UTF-8
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        shell: python
-        run: |
+        run: |-
           echo $env:GITHUB_ENV
           echo $env:GITHUB_PATH
 #          vswhere -version "[17,)" -latest -prerelease -format json -utf8 -products Microsoft.VisualStudio.Product.Enterprise Microsoft.VisualStudio.Product.Professional Microsoft.VisualStudio.Product.Community Microsoft.VisualStudio.Product.BuildTools
 #      - name: Update wiki
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        run: |
+#        run: |-
 #          git remote add remote https://github.com/${{ github.repository }}.git
 #          git fetch remote wiki
 #          git reset --hard remote/wiki
@@ -76,5 +76,5 @@ jobs:
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          test: ${{ matrix.test[0] }}
-#        run: |
+#        run: |-
 #          echo hi
